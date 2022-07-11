@@ -1,0 +1,64 @@
+header {
+background-color:blue;  
+position:fixed;
+}
+
+body {
+  
+    font-size: 15pt;
+  
+
+}
+a.head {
+  text-decoration-line:none; color:white;
+}
+a .active {color:blue;}
+
+td {
+  padding-right:5px;
+  padding-left:10px;
+  text-align:center;
+}
+.header {
+  color:white;
+  background-color:rgb(0,0,190);
+  height:30px;
+  padding:40px;
+  margin:-10px;
+  position:fixed;
+  top:0;
+  width:105%;
+  float:right;
+  box-shadow: 0px 0px 60px black;
+}
+.head {
+  font-size:40px;  
+  float:right; 
+  padding-right:10px; 
+  padding-top:-10px;
+}
+.body1 {
+  background-color:rgb(300,300,300,0.7);
+  padding:2px;
+  border-width:2px;
+  border-style:dashed;
+  border-color:rgb(0,0,190);
+  
+}
+.head:hover {
+  background-color:rgb(300,300,300);
+  border-color:black;
+  color:rgb(0,0,190);
+  
+  border:1px;
+}
+.logo {
+  object-fit:cover; width:150px; height:150px; margin-left:-10px;
+  
+  
+}
+canvas {
+  border-style:dotted; border-color:black; background-color:lightGrey; border-width:1px;
+margin:auto;
+  
+}
