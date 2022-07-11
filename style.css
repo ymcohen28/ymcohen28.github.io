@@ -43,6 +43,7 @@ td {
   border-width:2px;
   border-style:dashed;
   border-color:rgb(0,0,190);
+  width: 45%;
   
 }
 .head:hover {
