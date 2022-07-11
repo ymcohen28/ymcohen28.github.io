@@ -5,7 +5,7 @@ position:fixed;
 
 body {
   
-    font-size: 15pt;
+    font-size: 1.5 em;
   
 
 }
@@ -23,7 +23,7 @@ td {
   color:white;
   background-color:rgb(0,0,190);
   height:30px;
-  padding:40px;
+  padding:60px;
 
   position:fixed;
   top:0;
