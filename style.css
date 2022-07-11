@@ -24,7 +24,7 @@ td {
   background-color:rgb(0,0,190);
   height:30px;
   padding:40px;
-  margin:-10px;
+  margin: 10px;
   position:fixed;
   top:0;
   width:105%;
@@ -53,7 +53,7 @@ td {
   border:1px;
 }
 .logo {
-  object-fit:cover; width:150px; height:150px; margin-left:-10px;
+  object-fit:cover; width:150px; height:150px; margin-left:10px;
   
   
 }
