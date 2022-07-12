@@ -15,6 +15,7 @@ a .active {
 h1, h3 {
 margin-left:10%;
   margin-top: 70 px;
+  padding-top: 100 px;
 }
 
 
@@ -26,7 +27,7 @@ td {
 }
 .header {
   color:white;
-  background-color:rgb(0,0,190);
+  background-color:light-blue;
   height:15%;
   position:fixed;
   top:0;
