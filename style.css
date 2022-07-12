@@ -3,16 +3,13 @@ background-color:blue;
 position:fixed;
 }
 
-body {
-  
-    font-size: 2.5 em;
-  
 
-}
 a.head {
   text-decoration-line:none; color:white;
 }
-a .active {color:blue;}
+a .active {color:blue;
+
+}
 
 td {
   padding-right:1%, 5%, 1%, 3%;
@@ -34,29 +31,23 @@ td {
   padding-top:-10px;
 }
 .body1 {
-  background-color:rgb(300,300,300,0.7);
+  background-color:rgb(200,200,200,0.7);
   padding:2px;
   border-width:2px;
   border-style:dashed;
   border-color:rgb(0,0,190);
   width: 45%;
   margin-left:10%;
+  font-size: 2.5 em;
   
 }
 .head:hover {
   background-color:rgb(300,300,300);
   border-color:black;
   color:rgb(0,0,190);
-  
+  size: 1.1;
   border:1px;
 }
 .logo {
   object-fit:cover; width:150px; height:150px; margin-left:10px;
-  
-  
-}
-canvas {
-  border-style:dotted; border-color:black; background-color:lightGrey; border-width:1px;
-margin:auto;
-  
 }
