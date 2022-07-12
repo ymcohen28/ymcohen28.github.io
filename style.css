@@ -21,9 +21,7 @@ td {
 .header {
   color:white;
   background-color:rgb(0,0,190);
-  height:30px;
-  padding:60px;
-
+  height:10%;
   position:fixed;
   top:0;
   width:100%;
