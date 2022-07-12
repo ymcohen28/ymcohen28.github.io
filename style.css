@@ -12,13 +12,11 @@ a .active {
   color:blue;
 }
 
-h1 {
+h1, h3 {
 margin-left:10%;
-  margin-top: 10 px;
+  margin-top: 70 px;
 }
-h2 {
-margin-left:10%;
-}
+
 
 td {
 
