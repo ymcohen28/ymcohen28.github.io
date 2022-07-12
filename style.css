@@ -7,8 +7,17 @@ position:fixed;
 a.head {
   text-decoration-line:none; color:white;
 }
-a .active {color:blue;
 
+a .active {
+  color:blue;
+}
+
+h1 {
+margin-left:10%;
+  margin-top: 10 px;
+}
+h2 {
+margin-left:10%;
 }
 
 td {
@@ -37,7 +46,7 @@ td {
   border-color:rgb(0,0,190);
   width: 45%;
   margin-left:10%;
-  font-size: 2.5 em;
+  font-size: 10 em;
   
 }
 .head:hover {
