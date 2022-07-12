@@ -26,9 +26,8 @@ td {
 
   position:fixed;
   top:0;
-  width:105%;
+  width:100%;
   float:right;
-  box-shadow: 0px 0px 60px black;
 }
 .head {
   font-size:40px;  
