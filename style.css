@@ -20,12 +20,7 @@ h3, h1 {
 }
 
 
-td {
 
-  text-align:center;
-  align:center;
-  padding: center;
-}
 .header {
   color:white;
   background-color:lightBlue;
@@ -36,6 +31,7 @@ td {
   width:100%;
 }
 .head {
+  text-align:center;
   font-size:40px;  
   float:right; 
   padding-right:10px; 
@@ -56,6 +52,7 @@ td {
   background-color:rgb(300,300,300);
   border-type:solid;
   border-color:blue;
+  border-width:1px
   color:lightBlue;
   size: 1.1;
   border:1px;
