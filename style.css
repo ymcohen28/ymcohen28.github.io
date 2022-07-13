@@ -19,7 +19,13 @@ h3, h1 {
   padding-top: 100 px;
 }
 
-
+audio {
+ margin-left:10%;
+ width:40%;
+ border-width:1px;
+ border-color:blue;
+ border-style:solid;
+}
 
 .header {
   color:white;
