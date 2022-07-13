@@ -26,7 +26,7 @@ audio {
  border-width:1px;
  border-color:blue;
  border-style:solid;
- border-radius:50%;
+ border-radius:10px;
  background-color:lightBlue;
 }
 
