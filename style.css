@@ -5,7 +5,8 @@ position:fixed;
 
 
 a.head {
-  text-decoration-line:none; color:white;
+  text-decoration-line:none; 
+  
 }
 
 a .active {
@@ -25,6 +26,7 @@ audio {
  border-width:1px;
  border-color:blue;
  border-style:solid;
+ border-radius:50%;
 }
 
 .header {
@@ -48,7 +50,7 @@ audio {
   color:lightBlue;
   
 }
-.body1 {
+p {
   background-color:rgba(200,200,200,0.7);
   padding:2px;
   border-width:2px;
