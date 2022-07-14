@@ -3,7 +3,9 @@ background-color:lightBlue;
 position:fixed;
 }
 
-
+td {
+border:2px solid blue;
+}
 a.head {
   text-decoration-line:none; 
   
@@ -63,11 +65,13 @@ p {
   
 }
 .head:hover {
-  background-color:rgb(300,300,300);
-  border-type:solid;
+  /*background-color:rgb(300,300,300);*/
+  background-color:lightBlue;
+  /*border-type:solid;
   border-color:blue;
-  border-width:1px;
+  border-width:1px;*/
   color:lightBlue;
+  border:2px solid blue;
   size: 1.1;
   border:1px;
 }
