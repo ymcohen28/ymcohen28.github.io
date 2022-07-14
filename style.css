@@ -65,15 +65,14 @@ p {
   
 }
 .head:hover {
-  /*background-color:rgb(300,300,300);*/
-  background-color:lightBlue;
-  /*border-type:solid;
+  background-color:white;
+  border-type:solid;
   border-color:blue;
-  border-width:1px;*/
+  border-width:1px;
   color:lightBlue;
   border:2px solid blue;
-  size: 1.1;
-  border:1px;
+  font-size: 1.1;
+
 }
 .logo {
   object-fit:cover; width:150px; height:150px; margin-left:15px; margin-top:15px
