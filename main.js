@@ -4,4 +4,16 @@ var setTime = function(){
   label.textContent = audio1.currentTime
 };
 setInterval(setTime, 1);
+var nextSongButton = document.getElementById("nextSongButton");
+var previousSongButtong = document.getElementById("previousSongButton");
+var urls = ["https://ymcohen.github.io/Uforatzah.mp3","https://ymcohen.github.io/Tyere%20Briyder.mp3","https://ymcohen.github.io/Nyeh%20Bayusya.mp3","https://ymcohen.github.io/Wake%20up%20Yidden.mp3"];
+var songUrl = 0;
+audio1.src = urls[songUrl] 
+var nextSong = function() {
+  if (songUrl === urls.length){
+  songUrl = 0}
+  else {
+  songUrl += 1
+  }
+};
 
