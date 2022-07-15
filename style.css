@@ -50,7 +50,7 @@ audio {
   color:white;
   
 }
-p {
+p, .body1 {
   background-color:rgba(230,230,250);
   padding:2px;
   border-width:2px;
