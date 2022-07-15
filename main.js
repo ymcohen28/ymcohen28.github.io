@@ -24,8 +24,8 @@ if (songUrl === 0){
   songUrl -= 1
 }
 nextSongButton.addEventListener("click",nextSong);
-previousSongButton.addEventListener("click",previousSong);
+previousSongButton.addEventListener("click",previousSong);*/
 var urlName = document.getElementById("urlName");
-urlName.textContent = urls[songUrl];
-*/
+urlName.textContent = audio1.src;
+
 
