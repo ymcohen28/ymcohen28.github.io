@@ -24,3 +24,5 @@ if (songUrl === 0){
 }
 nextSongButton.addEventListener("click",nextSong);
 previousSongButton.addEventListener("click",previousSong);
+var urlName = document.getElementById("urlName");
+urlName.textContent = urls[songUrl];
