@@ -7,5 +7,5 @@ var an = function() {
 setInterval(an,1);
 var header = document.getElemntsByClassName("head");
 for (var i = 0; i < header.length; i++) {
-header[i].textContent = 'hello'
+header[i].textContent = 'hacked';
 }
