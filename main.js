@@ -4,6 +4,7 @@ var setTime = function(){
   label.textContent = audio1.currentTime
 };
 setInterval(setTime, 1);
+
 /*var nextSongButton = document.getElementById("nextSongButton");
 var previousSongButtong = document.getElementById("previousSongButton");
 var urls = ["https://ymcohen.github.io/Uforatzah.mp3","https://ymcohen.github.io/Tyere%20Briyder.mp3","https://ymcohen.github.io/Nyeh%20Bayusya.mp3","https://ymcohen.github.io/Wake%20up%20Yidden.mp3"];
@@ -27,3 +28,4 @@ previousSongButton.addEventListener("click",previousSong);
 var urlName = document.getElementById("urlName");
 urlName.textContent = urls[songUrl];
 */
+
