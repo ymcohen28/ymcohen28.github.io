@@ -23,9 +23,14 @@ if (songUrl === 0){
   else {
   songUrl -= 1
 }
-nextSongButton.addEventListener("click",nextSong);
-previousSongButton.addEventListener("click",previousSong);
 var urlName = document.getElementById("urlName");
+
+var setSong = fucntion() {
+  nextSongButton.addEventListener("click",nextSong);
+previousSongButton.addEventListener("click",previousSong);
+
 urlName.textContent = audio1.src;
+                         };
+setInterval(setSong, 1);
 
 
