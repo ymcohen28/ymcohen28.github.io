@@ -16,4 +16,11 @@ var nextSong = function() {
   songUrl += 1
   }
 };
-
+var previousSong = function() {
+if (songUrl === 0){
+  songUrl = urls.length}
+  else {
+  songUrl -= 1
+}
+nextSongButton.addEventListener("click",nextSong);
+previousSongButton.addEventListener("click",previousSong);
