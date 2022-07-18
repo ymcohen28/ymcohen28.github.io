@@ -3,6 +3,7 @@ var label = document.getElementById("label");
 var an = function() {
   label.textContent = audio1.currentTime;
   label.textContent+= audio1.src;
+  console.log(audio1.currentTime);
                    };
 setInterval(an,1);
 var header = document.getElemntsByClassName("head");
