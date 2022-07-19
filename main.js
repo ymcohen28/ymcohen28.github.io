@@ -6,13 +6,10 @@ var an = function() {
   label.textContent+= audio1.src;
   audio1.currentTime = 2; 
 };
-
-var header = document.getElementsByClassName("head");
-for (var i = 0; i < header.length; i++) {
-header[i].textContent = 'This is Hacked!!';
-}
 var realHeader = document.getElementsByTagName("header");
-realHeader.innerHTML = "<div class="header">
+for (var i = 0; i < realHeader.length;i ++) {
+  
+  realHeader[i].innerHTML = "<div class="header">
         <a style="float:left; position:fixed;" href="/index.html">
             <img class="logo" id="logo-header" src="/logo.png" style=" ">
         </a>
@@ -22,4 +19,9 @@ realHeader.innerHTML = "<div class="header">
           <td><a class="head" href="/music.html">My Music</a></td>
         </tr>
       </table>
-    </div>";
+    </div>";}
+  
+  var header = document.getElementsByClassName("head");
+for (var i = 0; i < header.length; i++) {
+header[i].textContent = 'This is Hacked!!';
+}
