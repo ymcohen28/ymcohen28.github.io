@@ -1,3 +1,8 @@
+var header = document.getElementsByClassName("head");
+for (var i = 0; i < header.length; i++) {
+header[i].textContent = 'hacked';
+}
+
 var audio1 = document.getElementById("audio1");
 var label = document.getElementById("label");
 setInterval(an,1);
