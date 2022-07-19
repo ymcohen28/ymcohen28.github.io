@@ -11,3 +11,15 @@ var header = document.getElementsByClassName("head");
 for (var i = 0; i < header.length; i++) {
 header[i].textContent = 'This is Hacked!!';
 }
+var realHeader = document.getElementsByTagName("header");
+realHeader.innerHTML = "<div class="header">
+        <a style="float:left; position:fixed;" href="/index.html">
+            <img class="logo" id="logo-header" src="/logo.png" style=" ">
+        </a>
+      <table style="padding-right:100px; float:right;">
+        <tr>
+          <td><a class="head" href="/index.html">Home</a></td>
+          <td><a class="head" href="/music.html">My Music</a></td>
+        </tr>
+      </table>
+    </div>";
