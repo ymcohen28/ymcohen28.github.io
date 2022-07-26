@@ -12,5 +12,4 @@ for (var i = 0; i < realHeader.length;i ++) {
 realHeader[i].innerHTML = text;}  
 var header = document.getElementsByClassName("head");
 for (var i = 0; i < header.length; i++) {
-header[i].textContent = 'This is Hacked!!';
 }
