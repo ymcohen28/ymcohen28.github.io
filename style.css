@@ -1,3 +1,7 @@
+html {
+      scroll-padding-top: 120px;
+      scroll-behavior: smooth;
+}
 header {
 background-color:lightBlue;  
 position:fixed;
