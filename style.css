@@ -5,6 +5,7 @@ html {
 header {
 background-color:lightBlue;  
 position:fixed;
+z-index: 3;
 }
 a.head {
   text-decoration-line:none; 
@@ -24,8 +25,8 @@ text-align:center;
 opacity:0.9;
   font-size:50px;
   font-color:black;
-  z-index:1;
-  height:50%;
+  z-index: 1;
+  height:90%;
   position:absolute;
 }
 audio {
