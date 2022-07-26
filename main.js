@@ -6,7 +6,7 @@ var an = function() {
   label.textContent+= audio1.src;
   audio1.currentTime = 2; 
 };
-var text = "<div class='header'><a style='float:left; position:fixed;' href='/index.html'><img class='logo' id='logo-header' src='/logo.png' ></a><table style='padding-right:100px; float:right;'><tr><td><a class='head' href='/index.html'>Home</a></td><td><a class='head' href='/music.html'>My Music</a></td></tr></table></div>"
+var text = "<div class='header'><a style='float:left; position:fixed;' href='/index.html'><img class='logo' id='logo-header' src='/logo.png' ></a><table style='padding-right:100px; float:right;'><tr><td><a class='head' href='/index.html'>Home</a></td><td><a class='head' href='/music.html'>My Music</a></td><td><a class='head' title = "Note: This is for testing purposes only and will PROBABLY contain more bugs than the rest of the site!!" href='/test.html'>Test</a></td></tr></table></div>"
 var realHeader = document.getElementsByTagName("header");
 for (var i = 0; i < realHeader.length;i ++) {  
 realHeader[i].innerHTML = text;}  
