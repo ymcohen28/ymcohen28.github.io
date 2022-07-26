@@ -87,7 +87,8 @@ background-color:rgba(220,220,240);
 }
 .blog-sidebar {
 width:20%;
-margin-left:75%;
+margin-right:5%;
 position:fixed;
 margin-top:40%;
+      height:50%;
 }
