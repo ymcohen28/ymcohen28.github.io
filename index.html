@@ -39,14 +39,14 @@
 
 <script>
 var redirector = document.getElementById("redirecctor");
-var redirect = function() {
+var redirect1 = function() {
 redirector.click();
 };
 var time = 10;
 setTimeout(redirect,10000);
 var min-redirect = document.getElementById("min-redirect");
 var setTime = function() {
-min-redirect.textContent = time;
+min-redirect1.textContent = time;
 time -=1;
 };
 setInterval(setTime,1000);
