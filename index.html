@@ -36,10 +36,15 @@
   <header>
   </header>
       <h1 style="margin-top:200px;"> My log.</h1>
-      <p> Redirecting to the blog in <span id = "min-redirect">10</span>seconds. To go there now, click <a id = "redirector" href="blog.html"> Here</a>.</p>
+      <p> Redirecting to the blog in <span id = "min-redirect">10</span>seconds. To go there now, click <a id = "redirector" href="blog.html"> Here</a>. To stop the redirector, click <a id = "stop-redirect"> Here.</a></p>
     <script>
-    var changeLocation = function() {  
-      window.location = "https://ymcohen.github.io/blog.html";};
+   var stopRedirect = document.getElementById("stop-redirect");
+   var check = True;
+   var tOggle = function() { check = False;};
+      stopRedirect.addEventListener('click',tOggle);
+      var changeLocation = function() {  
+        if (check === True) {
+          window.location = "https://ymcohen.github.io/blog.html";}};
     setTimeout(changeLocation,9999);
     </script>
 
