@@ -45,24 +45,22 @@
    <!--<button  id = "nextSongButton"> next Song</button>
     <button  id = "previousSongButton"> previous song </button> 
     <h4 class = "body1" id = "urlName">hello</h4>-->
+    <input type="range" min="0" max="100" id = "amount">
+
     <script src="https://ymcohen.github.io/main.js"></script>
-<!--    <script>
-var audio1 = document.getElementById("audio1");
+    <script>
+      document.getElementById("label").textContent = document.getElementById("testAudio").src;
+var audio1 = document.getElementById("testAudio");
 var label = document.getElementById("label");
-setInterval(an,1);
-var an = function() {
-  label.textContent = audio1.currentTime;
-  label.textContent+= audio1.src;
-  audio1.currentTime = 2; 
-};
-var text = "<div class='header'><a style='float:left; position:fixed;' href='/index.html'><img class='logo' id='logo-header' src='/logo.png' ></a><table style='padding-right:100px; float:right;'><tr><td><a class='head' href='/index.html'>Home</a></td><td><a class='head' href='/music.html'>My Music</a></td></tr></table></div>"
-var realHeader = document.getElementsByTagName("header");
-for (var i = 0; i < realHeader.length;i ++) {  
-realHeader[i].innerHTML = text;}  
-var header = document.getElementsByClassName("head");
-for (var i = 0; i < header.length; i++) {
-header[i].textContent = 'This is Hacked!!';
-}
-    </script> -->
+var amount = document.getElementById("amount");
+
+var update = function() {document.getElementById("testAudio").currentTime = amount.value*(audio1.duration/100);}
+
+amount.addEventListener("mousedown",update);
+
+
+
+    </script>
 </body>
 </html>
+
