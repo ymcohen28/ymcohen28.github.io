@@ -40,11 +40,12 @@
     <script>
    var stopRedirect = document.getElementById("stop-redirect");
    var check = 1;
-   var tOggle = function() { check = 2;};
+   var tOggle = function() { check = 2;
+                           document.getElementById("warning").textContent = 'The redirector has been prevented.';};
       stopRedirect.addEventListener('click',tOggle);
       var changeLocation = function() {  
         if (check === 2) {
-        document.getElementById("warning").textContent = 'The redirector has been prevented';
+        
         }
         else {
           window.location = "https://ymcohen.github.io/blog.html";}};
