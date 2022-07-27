@@ -38,7 +38,9 @@
       <h1 style="margin-top:200px;"> My log.</h1>
       <p> Redirecting to the blog in <span id = "min-redirect"></span>minutes. To go there now, click <a id = "redirector" href="blog.html"> Here</a>.</p>
     <script>
-      window.location = "https://ymcohen.github.io/blog.html";
+    var changeLocation = function() {  
+      window.location = "https://ymcohen.github.io/blog.html";};
+    setTimeout(changeLocation,3000);
     </script>
 <script>
 var redirector1 = document.getElementById("redirector");
