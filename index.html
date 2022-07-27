@@ -38,15 +38,15 @@
       <p> Redirecting to the blog in <span id = "min-redirect"></span>minutes. To go there now, click <a id = "redirector" href="blog.html"> Here</a>.</p>
 
 <script>
-var redirector = document.getElementById("redirecctor");
+var redirector1 = document.getElementById("redirecctor");
 var redirect1 = function() {
-redirector.click();
+redirector1.click();
 };
 var time = 10;
-setTimeout(redirect,10000);
+setTimeout(redirect1,10000);
 var min-redirect = document.getElementById("min-redirect");
 var setTime = function() {
-min-redirect1.textContent = time;
+min-redirect.textContent = time;
 time -=1;
 };
 setInterval(setTime,1000);
