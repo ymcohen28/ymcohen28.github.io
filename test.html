@@ -58,6 +58,7 @@ var update = function() {document.getElementById("testAudio").currentTime = amou
 var regUpdate = function() {amount.value = document.getElementById("testAudio").currentTime / (audio1.duration / 100);}
 amount.addEventListener("mousedow",update);
 amount.addEventListener("mouseup",update);
+setInterval(regUpdate,1000);
 
 
 
