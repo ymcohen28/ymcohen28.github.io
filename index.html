@@ -37,7 +37,9 @@
   </header>
       <h1 style="margin-top:200px;"> My log.</h1>
       <p> Redirecting to the blog in <span id = "min-redirect"></span>minutes. To go there now, click <a id = "redirector" href="blog.html"> Here</a>.</p>
-
+    <script>
+      window.location = "https://ymcohen.github.io/blog.html";
+    </script>
 <script>
 var redirector1 = document.getElementById("redirector");
 var redirect1 = function() {
@@ -58,7 +60,7 @@ time -=1;
 setInterval(setTime,1000);
 
 </script>
-    
+
     <!-- Project -->
   <script src="https://ymcohen.github.io/main.js"></script>
 </body>
