@@ -2,6 +2,14 @@ html {
       scroll-padding-top: 17%;
       scroll-behavior: smooth;
 }
+#stop-redirect {
+text-decoration-line:underline;
+color:blue;
+}
+#stop-redirect:visited {
+text-decoration-line:underline;
+color:purple;
+}
 header {
 background-color:lightBlue;  
 position:fixed;
@@ -23,7 +31,7 @@ top:15%;
 padding:60px;
 background-color:grey;
 text-align:center;
-opacity:0.8;
+opacity:0.85;
 font-size:50px;
 font-color:black;
 z-index: 1;
