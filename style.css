@@ -17,6 +17,7 @@ margin-left:10%;
 #amount {
 float:center;
 width:80%;
+vertical-align:center;
 }
 #amount::-webkit-slider-thumb {
 background-color:lightBlue;
