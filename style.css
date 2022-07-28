@@ -23,6 +23,7 @@ margin-top:15px;
 background-color:lightBlue;
 border: 1px solid white;
 vertical-align:middle;
+margin-top:2px;
 }
 #amount::-webkit-slider-runnable-track {
 background-color:white;
