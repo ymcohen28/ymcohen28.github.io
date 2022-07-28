@@ -20,13 +20,12 @@ margin-left:10%;
 float:center;
 width:80%;
 vertical-align:middle;
-margin-top:15px;
 }
 #amount::-webkit-slider-thumb {
 background-color:lightBlue;
 border: 1px solid white;
 vertical-align:middle;
-margin-bottom:2px;
+margin-bottom:5px;
 }
 #amount::-webkit-slider-runnable-track {
 background-color:white;
