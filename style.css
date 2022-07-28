@@ -20,6 +20,9 @@ margin-left:10%;
 float:center;
 width:80%;
 vertical-align:middle;
+display:flex;
+align-items:center;
+justify-content:center;
 }
 #amount::-webkit-slider-thumb {
 background-color:lightBlue;
