@@ -27,7 +27,7 @@ vertical-align:middle;
 background-color:white;
 height:5px;
 border-radius:10;
-border: 3px solid rgba(250,250,250,1);
+border: 5px solid rgba(250,250,240,0.6);
 }
 #stop-redirect {
 text-decoration-line:underline;
