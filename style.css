@@ -7,7 +7,14 @@ margin-top:200px;
 margin-left:10%;
 }
 #amount {
-width:45%
+width:40%
+}
+#amount::-webkit-slider-thumb {
+background-color:blue;
+}
+#amount::-webkit-slider-runnable-track {
+background-color:lightBlue;
+border: 2px solid blue;
 }
 #stop-redirect {
 text-decoration-line:underline;
