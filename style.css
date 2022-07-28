@@ -1,6 +1,6 @@
 html {
-      scroll-padding-top: 17%;
-      scroll-behavior: smooth;
+scroll-padding-top: 17%;
+scroll-behavior: smooth;
 }
 
 .slider-background {
@@ -9,15 +9,14 @@ width:40%;
 border-radius:10px;
 background-color:lightBlue;
 border: 1px solid blue;
-
-
 }
 .content{
 margin-top:200px;
 margin-left:10%;
 }
 #amount {
-width:40%
+float:center;
+width:80%;
 }
 #amount::-webkit-slider-thumb {
 background-color:lightBlue;
@@ -25,6 +24,8 @@ border: 1px solid white;
 }
 #amount::-webkit-slider-runnable-track {
 background-color:white;
+height:5px;
+border-radius:10;
 }
 #stop-redirect {
 text-decoration-line:underline;
