@@ -2,6 +2,22 @@ html {
       scroll-padding-top: 17%;
       scroll-behavior: smooth;
 }
+.slider {
+height:20px;
+width:20px;
+border-radius:100;
+background-color:blue;
+border: 1px solid lightBlue;
+}
+.slider-background {
+height:10px;
+width:40%;
+border-radius:20;
+background-color:lightBlue;
+border: 1px solid blue;
+
+
+}
 .content{
 margin-top:200px;
 margin-left:10%;
