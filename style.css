@@ -2,7 +2,6 @@ html {
 scroll-padding-top: 17%;
 scroll-behavior: smooth;
 }
-
 .slider-background {
 height:40px;
 width:40%;
@@ -22,11 +21,13 @@ vertical-align:center;
 #amount::-webkit-slider-thumb {
 background-color:lightBlue;
 border: 1px solid white;
+vertical-align:center;
 }
 #amount::-webkit-slider-runnable-track {
 background-color:white;
 height:5px;
 border-radius:10;
+border: 3px solid rgba(250,250,250,1);
 }
 #stop-redirect {
 text-decoration-line:underline;
