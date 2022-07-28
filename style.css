@@ -5,7 +5,9 @@ html {
 .content{
 margin-top:200px;
 margin-left:10%;
-
+}
+#amount {
+width:45%
 }
 #stop-redirect {
 text-decoration-line:underline;
