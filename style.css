@@ -16,12 +16,12 @@ margin-left:10%;
 #amount {
 float:center;
 width:80%;
-vertical-align:center;
+vertical-align:middle;
 }
 #amount::-webkit-slider-thumb {
 background-color:lightBlue;
 border: 1px solid white;
-vertical-align:center;
+vertical-align:middle;
 }
 #amount::-webkit-slider-runnable-track {
 background-color:white;
