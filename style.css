@@ -92,7 +92,7 @@ p, .body1 {
   font-size: 1.1;
 }
 .logo {
-  object-fit:cover; width:150px; height:150px; margin-left:15px; margin-top:15px; z-index:6;
+  object-fit:cover; width:10%; height:150px; margin-left:15px; margin-top:15px; z-index:6;
 }
 .code {
 font-family:monospace;
