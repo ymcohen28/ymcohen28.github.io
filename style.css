@@ -33,7 +33,7 @@ margin-top:-8px;
 background-color:white;
 height:5px;
 border-radius:3px;
-border: 10px solid lightBlue;
+border:3px solid rgba(200,200,200,0.1);
 }
 #stop-redirect {
 text-decoration-line:underline;
