@@ -27,13 +27,13 @@ justify-content:center;
 #amount::-webkit-slider-thumb {
 background-color:lightBlue;
 vertical-align:middle;
-margin-top:-8px;
+margin-top:-50%;
 }
 #amount::-webkit-slider-runnable-track {
 background-color:white;
 height:20px;
-border-radius:3px;
-border:5px solid lightBlue;
+border-radius:5px;
+border:10px solid lightBlue;
 }
 #stop-redirect {
 text-decoration-line:underline;
