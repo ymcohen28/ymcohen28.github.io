@@ -60,7 +60,7 @@ var amount = document.getElementById("amount");
 
 var update = function() {document.getElementById("testAudio").currentTime = amount.value*(audio1.duration/100);}
 var regUpdate = function() {amount.value = document.getElementById("testAudio").currentTime / (audio1.duration / 100);}
-amount.addEventListener("mousedow",update);
+amount.addEventListener("mousedown",update);
 amount.addEventListener("mouseup",update);
 setInterval(regUpdate,5);
 amount.addEventListener('keyDown', function(e) {
