@@ -46,7 +46,7 @@ cursor:pointer;
 #amount::-webkit-slider-thumb {
 background-color:lightBlue;
 vertical-align:middle;
-margin-top:-8px;
+margin-top:-7px;
 }
 #amount::-webkit-slider-runnable-track {
 background-color:white;
