@@ -64,10 +64,10 @@ amount.addEventListener("mouseup",update);
       var regUpdate = function() {amount.value = document.getElementById("testAudio").currentTime / (audio1.duration / 100);}
 setInterval(regUpdate,1000);
 var keyPressed = function(e) {
-if (e.key = 'ArrowRight') {
+if (e.key === 'ArrowRight') {
 audio1.currentTime += 2;
 }
-if (e.key = 'ArrowLeft') {
+if (e.key === 'ArrowLeft') {
 audio1.currentTime -=2;
 }
 };
