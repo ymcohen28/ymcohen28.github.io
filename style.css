@@ -31,9 +31,9 @@ margin-top:-8px;
 }
 #amount::-webkit-slider-runnable-track {
 background-color:white;
-height:10px;
+height:20px;
 border-radius:3px;
-border:5px solid rgba(200,200,200,0.1);
+border:5px solid lightBlue;
 }
 #stop-redirect {
 text-decoration-line:underline;
