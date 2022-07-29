@@ -10,6 +10,8 @@ float:right;
 padding:2px;
 border-style:none;
 color:white;
+border-radius:2px;
+margin: 2px;
 }
 .audio-controls:hover {
   background-color:white;
@@ -46,7 +48,7 @@ margin-top:-8px;
 #amount::-webkit-slider-runnable-track {
 background-color:white;
 height:20px;
-border-radius:10px;
+border-radius:8px;
 border:8px solid lightBlue;
 }
 #stop-redirect {
