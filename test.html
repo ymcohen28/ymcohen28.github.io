@@ -57,7 +57,7 @@
 var audio1 = document.getElementById("testAudio");
 var label = document.getElementById("label");
 var amount = document.getElementById("amount");
-
+amount.step = audio1.duration*2;
 var update = function() {document.getElementById("testAudio").currentTime = amount.value*(audio1.duration/100);}
 var regUpdate = function() {amount.value = document.getElementById("testAudio").currentTime / (audio1.duration / 100);}
 amount.addEventListener("mousedown",update);
