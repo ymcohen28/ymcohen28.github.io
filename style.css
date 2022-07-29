@@ -10,8 +10,8 @@ float:right;
 padding:2px;
 border-style:none;
 color:white;
-border-radius:2px;
-margin: 2px;
+border-radius:5px;
+margin: 5px;
 }
 .audio-controls:hover {
   background-color:white;
