@@ -62,7 +62,7 @@ var update = function() {document.getElementById("testAudio").currentTime = amou
 amount.addEventListener("mousedown",update);
 amount.addEventListener("mouseup",update);
       var regUpdate = function() {amount.value = document.getElementById("testAudio").currentTime / (audio1.duration / 100);}
-setInterval(regUpdate,5);
+/*setInterval(regUpdate,5);*/
 amount.addEventListener('keyDown', function(e) {
 if (e.key = 'ArrowRight') {
 audio1.currentTime += 2;
