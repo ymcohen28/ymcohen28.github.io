@@ -49,6 +49,7 @@
     
   
   <div class = "slider-background" id = "slider-background1">
+    <button type= 'button' class = "audio-controls" id = "play-pause"> Play/Pause </button>
     <input type="range" min="0" max="100" id = "amount"> 
   </div>
     <script src="https://ymcohen.github.io/main.js"></script>
@@ -57,20 +58,20 @@
 var audio1 = document.getElementById("testAudio");
 var label = document.getElementById("label");
 var amount = document.getElementById("amount");
-amount.step = audio1.duration*2;
 var update = function() {document.getElementById("testAudio").currentTime = amount.value*(audio1.duration/100);}
 amount.addEventListener("mousedown",update);
 amount.addEventListener("mouseup",update);
       var regUpdate = function() {amount.value = document.getElementById("testAudio").currentTime / (audio1.duration / 100);}
-setInterval(regUpdate,100);
-amount.addEventListener('keyDown', function(e) {
+setInterval(regUpdate,1000);
+var keyPressed = function(e) {
 if (e.key = 'ArrowRight') {
 audio1.currentTime += 2;
 }
 if (e.key = 'ArrowLeft') {
 audio1.currentTime -=2;
 }
-});
+};
+      amount.addEventListener('keyDown',keyPressed);
 
 
     </script>
