@@ -15,6 +15,6 @@ for (var i = 0; i < header.length; i++) {
 }
 var logo = document.getElementsByClassName("logo");
 for (var i = 0; i < logo.length; i++) {
-  if (window.innerWidth > 400) {logo.width = window.innerWidth / 10;}
-  else {logo.width = window.innerHeight / 10;}
+  if (window.innerWidth > 400) {logo[i].width = window.innerWidth / 10;}
+  else {logo[i].width = window.innerHeight / 10;}
 }
