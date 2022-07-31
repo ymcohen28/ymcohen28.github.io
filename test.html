@@ -67,7 +67,6 @@ var getUrls = document.getElementsByClassName("URLs");
 for (var i = 0; i < getUrls.length;i++) {
 getUrls[i].textContent = getUrls[i].data-name;
 }
-var changeUrl = ;
 var pause = function() {
 if (audio1.paused) {
 audio1.play();
@@ -76,27 +75,18 @@ else {
 audio1.pause();
 }
 };
+      
 for (var i = 0; i < getUrls.length;i++) {
 getUrls[i].addEventListener('click',function() {
 audio1.src = getUrls[i].data-url;
-} ;
+};
 }
-amount.step = audio1.duration;
 var sliderBackground = document.getElementById("slider-background1");
 var update = function() {document.getElementById("testAudio").currentTime = amount.value*(audio1.duration/100);}
 amount.addEventListener("mousedown",update);
 amount.addEventListener("mouseup",update);
-      var regUpdate = function() {amount.value = document.getElementById("testAudio").currentTime / (audio1.duration / 100);}
-setInterval(regUpdate,500);
-var keyPressed = function(e) {
-if (e.key === 'ArrowRight') {
-audio1.currentTime += 2;
-}
-if (e.key === 'ArrowLeft') {
-audio1.currentTime -=2;
-}
-};
-amount.addEventListener('keyDown',keyPressed);
+var regUpdate = function() {amount.value = document.getElementById("testAudio").currentTime / (audio1.duration / 100);}
+setInterval(regUpdate,1000);
 pausePlay.addEventListener('click', pause);
 
 
