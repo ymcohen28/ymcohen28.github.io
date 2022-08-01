@@ -58,14 +58,19 @@
   </div>
     <script src="https://ymcohen.github.io/main.js"></script>
     <script>
-var regUpdate = function() {amount.value = document.getElementById("testAudio").currentTime / (audio1.duration / 100);}
-setInterval(regUpdate,1000);
 document.getElementById("label").textContent = document.getElementById("testAudio").src;
 var audio1 = document.getElementById("testAudio");
 var label = document.getElementById("label");
 var amount = document.getElementById("amount");
 var pausePlay = document.getElementById("play-pause");
 var getUrls = document.getElementsByClassName("URLs");
+var sliderBackground = document.getElementById("slider-background1");
+var update = function() {document.getElementById("testAudio").currentTime = amount.value*(audio1.duration/100);}
+var regUpdate = function() {amount.value = document.getElementById("testAudio").currentTime / (audio1.duration / 100);}
+setInterval(regUpdate,1000);
+amount.addEventListener("mousedown",update);
+amount.addEventListener("mouseup",update);
+pausePlay.addEventListener('click', pause);
 for (var i = 0; i < getUrls.length;i++) {
 getUrls[i].textContent = getUrls[i].data-name;
 }
@@ -83,13 +88,6 @@ getUrls[i].addEventListener('click',function() {
 audio1.src = getUrls[i].data-url;
 };
 }
-var sliderBackground = document.getElementById("slider-background1");
-var update = function() {document.getElementById("testAudio").currentTime = amount.value*(audio1.duration/100);}
-amount.addEventListener("mousedown",update);
-amount.addEventListener("mouseup",update);
-pausePlay.addEventListener('click', pause);
-
-
     </script>
      </div>                        
 </body>
