@@ -79,7 +79,12 @@ audio1.pause();
 };
 pausePlay.addEventListener("click", pause);
 for (var i = 0; i < getUrls.length; i++) {
-getUrls[i].textContent = getUrls[i].data-name;
+getUrls[i].textContent = getUrls[i].dataset.name;
+}
+for (var i = 0; i < getUrls.length;i++) {
+getUrls[i].addEventListener('click',function() {
+audio1.src = getUrls[i].dataset.url;
+};
 }
     </script>
      </div>                        
