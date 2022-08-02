@@ -69,9 +69,6 @@ var regUpdate = function() {amount.value = document.getElementById("testAudio").
 setInterval(regUpdate,1000);
 amount.addEventListener("mousedown",update);
 amount.addEventListener("mouseup",update);
-for (var i = 0; i < getUrls.length; i++) {
-getUrls[i].textContent = getUrls[i].data-name;
-}
 var pause = function() {
 if (audio1.paused) {
 audio1.play();
@@ -81,11 +78,6 @@ audio1.pause();
 }
 };
 pausePlay.addEventListener("click", pause);
-for (var i = 0; i < getUrls.length;i++) {
-getUrls[i].addEventListener('click',function() {
-audio1.src = getUrls[i].data-url;
-};
-}
     </script>
      </div>                        
 </body>
