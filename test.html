@@ -83,6 +83,9 @@ getUrls[i].textContent = getUrls[i].dataset.name;
 }
 
 getUrls.forEach(this.addEventListener('click', function() {audio1.src = this.dataset.url;}));
+for (var i = 0; i < getUrls.length; i++) {
+getUrls[i].addEventListener('click', function() {audio1.src = getUrls[i].dataset.url;
+}
 
     </script>
      </div>                        
