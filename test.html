@@ -86,6 +86,9 @@ getUrls[i].textContent = getUrls[i].dataset.name;
 
 for (var i = 0; i < getUrls.length; i++) {
 getUrls[i].addEventListener('click',function() {audio1.src = this.dataset.url;
+this.style.borderLeft = "2px solid Blue";
+this.style.backgroundColor = "lightBlue";
+this.style.color = "white";
 });
 }
 
