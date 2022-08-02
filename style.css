@@ -17,6 +17,7 @@ margin: 5px;
   background-color:white;
   border:2px solid blue;
   color:lightBlue;
+  cursor:pointer; 
 }
 .slider-background {
 height:40px;
