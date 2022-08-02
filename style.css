@@ -3,14 +3,13 @@ scroll-padding-top: 17%;
 scroll-behavior: smooth;
 }
 .URLs {
-width:45%;
+width:30%;
 font-size: 30px;
-
 }
 .URLs:hover {
-border: 1px solid lightBlue;
+border: 2px solid lightBlue;
   border-left: 2px solid blue;
-
+color:blue;
 }
 .audio-controls {
 background-color:lightBlue;
