@@ -78,6 +78,9 @@ audio1.pause();
 }
 };
 pausePlay.addEventListener("click", pause);
+for (var i = 0; i < getUrls.length; i++) {
+getUrls[i].textContent = getUrls[i].data-name;
+}
     </script>
      </div>                        
 </body>
