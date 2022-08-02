@@ -50,7 +50,7 @@
   
   <div class = "slider-background" id = "slider-background1">
     <button type= 'button' class = "audio-controls" id = "play-pause"> Play/Pause </button>
-    <input type="range" min="0" max="100" id = "amount" > <br>
+    <input type="range" min="0" max="100" id = "amount" >
     <p class = 'URLs' data-url = 'https://ymcohen.github.io/Uforatzah.mp3' data-name = 'Uforatztoh'></p>
     <p class = 'URLs' data-url = 'https://ymcohen.github.io/Tyere Briyder.mp3' data-name = 'Tyere Briyder'></p>
     <p class = 'URLs' data-url = 'https://ymcohen.github.io/Nyeh Bayusya.mp3' data-name = 'Nyeh Bayusya'></p>
@@ -81,7 +81,8 @@ pausePlay.addEventListener("click", pause);
 for (var i = 0; i < getUrls.length; i++) {
 getUrls[i].textContent = getUrls[i].dataset.name;
 }
-getUrls.forEach(document.addEventListener('click', function() {audio1.src = this.dataset.url;}));
+
+getUrls.forEach(this.addEventListener('click', function() {audio1.src = this.dataset.url;}));
 
     </script>
      </div>                        
