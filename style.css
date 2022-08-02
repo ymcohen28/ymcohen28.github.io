@@ -25,7 +25,6 @@ border-radius:10px;
 background-color:lightBlue;
 border: 1px solid blue;
 display:flex;
-align-items:center;
 justify-content:center;
 }
 .content{
