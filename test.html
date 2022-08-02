@@ -82,7 +82,16 @@ pausePlay.addEventListener("click", pause);
 for (var i = 0; i < getUrls.length; i++) {
 getUrls[i].textContent = getUrls[i].dataset.name;
 }
-
+var something = function() {
+for (var i = 0; i < getUrls.length; i++) {  
+if (audio1.src !== getUrls[i].dataset.url) {
+getUrls[i].style.border = "2px solid lightBlue";
+getUrls[i].style.borderLeft = "2px solid Blue";
+getUrls[i].style.color = "blue";
+}
+}
+}
+setInterval(something,100);
 
 for (var i = 0; i < getUrls.length; i++) {
 getUrls[i].addEventListener('click',function() {audio1.src = this.dataset.url;
@@ -90,13 +99,7 @@ this.style.borderLeft = "2px solid Blue";
 this.style.backgroundColor = "lightBlue";
 this.style.color = "white";
 });
-var something = function() {if (audio1.src !== getUrls[i].dataset.url) {
-getUrls[i].style.border = "2px solid lightBlue";
-getUrls[i].style.borderLeft = "2px solid Blue";
-getUrls[i].style.color = "blue";
-}
-}
-setInterval(something,100);
+
 }
 
     </script>
