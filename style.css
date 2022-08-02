@@ -5,11 +5,11 @@ scroll-behavior: smooth;
 .URLs {
 width:30%;
 font-size: 30px;
+color:blue;
 }
 .URLs:hover {
 border: 2px solid lightBlue;
   border-left: 2px solid blue;
-color:blue;
 }
 .audio-controls {
 background-color:lightBlue;
