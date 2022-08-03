@@ -6,10 +6,13 @@ scroll-behavior: smooth;
 width:30%;
 font-size: 30px;
 color:blue;
+border: 2px solid white;
+border-left: 3px solid white;
+
 }
 .URLs:hover {
 border: 2px solid lightBlue;
-  border-left: 2px solid blue;
+border-left: 3px solid blue;
 }
 .audio-controls {
 background-color:lightBlue;
