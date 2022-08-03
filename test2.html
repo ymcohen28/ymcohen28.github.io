@@ -1,0 +1,114 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+      <script type="application/processing" src="/main.js">
+      
+      <script src="/main.js">
+       <script src="/main.js">
+       
+
+      </script>
+  
+  <title>TESTING... 1.2.3!!</title>
+  
+  <link rel="icon" type="image/png" href="/logo.ico" />
+
+  <link rel="stylesheet" href="style.css">
+              <!--Start of Tawk.to Script-->
+              <script type="text/javascript">
+              var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+              (function(){
+              var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+              s1.async=true;
+              s1.src='https://embed.tawk.to/62cc7c947b967b1179990eaf/default';
+              s1.charset='UTF-8';
+              s1.setAttribute('crossorigin','*');
+              s0.parentNode.insertBefore(s1,s0);
+              })();
+              </script>
+              <!--End of Tawk.to Script-->
+  </head>
+
+  <body>
+    <link type = "text/html" src = "/head.html"/>
+  <header>
+    
+</header>
+<div class = "content">
+      <h1 > My log.</h1>
+      <audio id = "testAudio" controls src = "https://ymcohen.github.io/Uforatzah.mp3"></audio>
+    <h1 class = "body" id = "label"></h1>
+   <!--<button  id = "nextSongButton"> next Song</button>
+    <button  id = "previousSongButton"> previous song </button> 
+    <h4 class = "body1" id = "urlName">hello</h4>-->
+    
+  
+  <div class = "slider-background" id = "slider-background1">
+    <button type= 'button' class = "audio-controls" id = "play-pause"> Play/Pause </button>
+    <input type="range" min="0" max="100" id = "amount" >
+    
+  </div>
+<p class='URLs' data-url='https://ymcohen.github.io/Uforatzah.mp3' data-name='Uforatztoh'></p>
+<p class='URLs' data-url='https://ymcohen.github.io/Tyere Briyder.mp3' data-name='Tyere Briyder'></p>
+<p class='URLs' data-url='https://ymcohen.github.io/Nyeh Bayusya.mp3' data-name='Nyeh Bayusya'></p>
+<p class='URLs' data-url='https://ymcohen.github.io/Wake up Yidden.mp3' data-name='Wake UP Yidden'></p>
+    <script src="https://ymcohen.github.io/main.js"></script>
+    <script>
+document.getElementById("label").textContent = document.getElementById("testAudio").src;
+var audio1 = document.getElementById("testAudio");
+var amount = document.getElementById("amount");
+var pausePlay = document.getElementById("play-pause");
+var getUrls = document.getElementsByClassName("URLs");
+var sliderBackground = document.getElementById("slider-background1");
+var update = function() {document.getElementById("testAudio").currentTime = amount.value*(audio1.duration/100);};
+var regUpdate = function() {if (amount.mousedown === false) {amount.value = document.getElementById("testAudio").currentTime / (audio1.duration / 100);}};
+setInterval(regUpdate,400);
+var songSelected;
+amount.addEventListener("mousedown",update);
+amount.addEventListener("mouseup",update);
+var pause = function() {
+if (audio1.paused) {
+audio1.play();
+}
+else {
+audio1.pause();
+}
+};
+pausePlay.addEventListener("click", pause);
+for (var i = 0; i < getUrls.length; i++) {
+getUrls[i].textContent = getUrls[i].dataset.name;
+}
+var something = function() {
+for (var i = 0; i < getUrls.length; i++) {  
+if (songSelected !== getUrls[i]) {
+getUrls[i].style.color = 'blue';
+getUrls[i].style.backgroundColor = 'white';
+getUrls[i].style.borderLeft = "2px solid white";
+}
+}
+};
+setInterval(something,100);
+
+for (var i = 0; i < getUrls.length; i++) {
+getUrls[i].addEventListener('click',function() {
+audio1.src = this.dataset.url;
+this.style.borderLeft = "2px solid blue";
+this.style.backgroundColor = "lightBlue";
+this.style.color = "white";
+songSelected = this;
+console.log(songSelected);
+});
+
+}
+
+    </script>
+     </div>                        
+</body>
+</html>
