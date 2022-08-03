@@ -68,7 +68,7 @@ var pausePlay = document.getElementById("play-pause");
 var getUrls = document.getElementsByClassName("URLs");
 var sliderBackground = document.getElementById("slider-background1");
 var update = function() {document.getElementById("testAudio").currentTime = amount.value*(audio1.duration/100);};
-var regUpdate = function() {amount.value = document.getElementById("testAudio").currentTime / (audio1.duration / 100);};
+var regUpdate = function() {amount.value = audio1.currentTime / (audio1.duration / 100);};
 setInterval(regUpdate,400);
 var songSelected;
 amount.addEventListener("mousedown",update);
@@ -91,9 +91,6 @@ if (songSelected !== getUrls[i]) {
 getUrls[i].style.color = 'blue';
 getUrls[i].style.backgroundColor = 'white';
 getUrls[i].style.borderLeft = "2px solid blue";
-getUrls[i].addEventListener('mouseenter',function() {
-getUrls[i].style.borderLeft = "4px solid blue";
-};
 }
 }
 };
