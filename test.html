@@ -66,8 +66,10 @@ var pausePlay = document.getElementById("play-pause");
 var getUrls = document.getElementsByClassName("URLs");
 var sliderBackground = document.getElementById("slider-background1");
 var update = function() {document.getElementById("testAudio").currentTime = amount.value*(audio1.duration/100);};
-var regUpdate = function() {amount.value = document.getElementById("testAudio").currentTime / (audio1.duration / 100);};
-setInterval(regUpdate,400);
+var regUpdate = function() {amount.value = audio1.currentTime / (audio1.duration / 100);};
+setInterval(regUpdate,300);
+var songSelected;
+var hovered;
 amount.addEventListener("mousedown",update);
 amount.addEventListener("mouseup",update);
 var pause = function() {
@@ -83,29 +85,32 @@ for (var i = 0; i < getUrls.length; i++) {
 getUrls[i].textContent = getUrls[i].dataset.name;
 }
 var something = function() {
-for (var i = 0; i < getUrls.length; i++) {  
-if (audio1.src === getUrls[i].dataset.url) {
-getUrls[i].style.borderLeft = "2px solid Blue";
-getUrls[i].style.backgroundColor = "lightBlue";
-getUrls[i].style.color = "white";
-}
-elif (audio1.src !== getUrls[i].dataset.url) {
+for (var i = 0; i < getUrls.length; i++) {
+if (songSelected !== getUrls[i] && hovered !== getUrls[i]) {
 getUrls[i].style.color = 'blue';
 getUrls[i].style.backgroundColor = 'white';
-getUrls[i].style.borderLeft = "2px solid white";
+getUrls[i].style.borderLeft = "2px solid blue";
 }
 }
 };
-setInterval(something,5);
+setInterval(something,100);
 
 for (var i = 0; i < getUrls.length; i++) {
-getUrls[i].addEventListener('click',function() {
 
-getUrls[i].style.borderLeft = "2px solid Blue";
-getUrls[i].style.backgroundColor = "lightBlue";
-getUrls[i].style.color = "white";
+
+getUrls[i].addEventListener('click',function() {
 audio1.src = this.dataset.url;
+this.style.borderLeft = "4px solid blue";
+this.style.backgroundColor = "lightBlue";
+this.style.color = "white";
+songSelected = this;
+console.log(songSelected);
 });
+getUrls[i].addEventListener('mouseenter', function() {
+hovered = getUrls[i];
+});
+getUrls[i].addEventListener('mouseout', function() {
+hovered = null});
 
 }
 
