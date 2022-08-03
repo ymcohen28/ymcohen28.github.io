@@ -90,7 +90,8 @@ for (var i = 0; i < getUrls.length; i++) {
 if (songSelected !== getUrls[i]) {
 getUrls[i].style.color = 'blue';
 getUrls[i].style.backgroundColor = 'white';
-if (getUrls[i].onmouseover) {getUrls[i].style.borderLeft = "4px solid blue";}
+if (getUrls[i].onmouseover) {getUrls[i].style.borderLeft = "4px solid blue"; getUrls[i].style.backgroundColor = "rgb(240, 240, 250)";}
+if (!getUrls[i].onmouseover) {getUrls[i].style.borderLeft = "2px solid blue"; getUrls[i].style.backgroundColor = "white";}
 }
 }
 };
