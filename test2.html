@@ -68,7 +68,7 @@ var pausePlay = document.getElementById("play-pause");
 var getUrls = document.getElementsByClassName("URLs");
 var sliderBackground = document.getElementById("slider-background1");
 var update = function() {document.getElementById("testAudio").currentTime = amount.value*(audio1.duration/100);};
-var regUpdate = function() {if (amount.mousedown === false) {amount.value = document.getElementById("testAudio").currentTime / (audio1.duration / 100);}};
+var regUpdate = function() {amount.value = document.getElementById("testAudio").currentTime / (audio1.duration / 100);};
 setInterval(regUpdate,400);
 var songSelected;
 amount.addEventListener("mousedown",update);
