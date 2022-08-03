@@ -8,11 +8,11 @@ font-size: 30px;
 color:blue;
 border: 2px solid white;
 border-left: 3px solid white;
+padding:3px;
 
 }
 .URLs:hover {
-border: 2px solid lightBlue;
-border-left: 3px solid blue;
+border-left: 4px solid blue;
 }
 .audio-controls {
 background-color:lightBlue;
