@@ -98,7 +98,15 @@ getUrls[i].style.backgroundColor = 'white';
 setInterval(something,100);
 
 for (var i = 0; i < getUrls.length; i++) {
-getUrls[i].addEventListener('click',function() {audio1.src = this.dataset.url;
+getUrls[i].addEventListener('click',function() {
+  for (var j = 0; j < getUrls.length; j++) {
+    getUrls[j].style.color = 'blue';
+    getUrls[j].style.backgroundColor = 'white';
+  }
+getUrls[i].style.borderLeft = "2px solid Blue";
+getUrls[i].style.backgroundColor = "lightBlue";
+getUrls[i].style.color = "white";
+audio1.src = this.dataset.url;
 });
 
 }
