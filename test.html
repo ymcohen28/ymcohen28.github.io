@@ -66,7 +66,7 @@ var pausePlay = document.getElementById("play-pause");
 var getUrls = document.getElementsByClassName("URLs");
 var sliderBackground = document.getElementById("slider-background1");
 var update = function() {document.getElementById("testAudio").currentTime = amount.value*(audio1.duration/100);};
-var regUpdate = function() {if (amount.mousedown === false) {amount.value = document.getElementById("testAudio").currentTime / (audio1.duration / 100);}};
+var regUpdate = function() {amount.value = document.getElementById("testAudio").currentTime / (audio1.duration / 100);};
 setInterval(regUpdate,400);
 amount.addEventListener("mousedown",update);
 amount.addEventListener("mouseup",update);
@@ -96,7 +96,7 @@ getUrls[i].style.borderLeft = "2px solid white";
 }
 }
 };
-setInterval(something,100);
+setInterval(something,5);
 
 for (var i = 0; i < getUrls.length; i++) {
 getUrls[i].addEventListener('click',function() {
