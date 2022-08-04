@@ -49,68 +49,20 @@
     <input type="range" min="0" max="100" id = "amount" >
     
   </div>
+  <div class = "changesongs">
+  <button type = 'button' class = "audio-controls" id = "prev-song">Previous Song</buttton>  
+  <button type = 'button' class = "audio-controls" id = "next-song">Next Song</buttton>
+  </div>
 <p class='URLs' data-url='https://ymcohen28.github.io/Uforatzah.mp3' data-name='Uforatztoh'></p>
 <p class='URLs' data-url='https://ymcohen28.github.io/Tyere Briyder.mp3' data-name='Tyere Briyder'></p>
 <p class='URLs' data-url='https://ymcohen28.github.io/Nyeh Bayusya.mp3' data-name='Nyeh Bayusya'></p>
 <p class='URLs' data-url='https://ymcohen28.github.io/Wake up Yidden.mp3' data-name='Wake UP Yidden'></p>
     <script src="/main.js"></script>
-    <script>
-document.getElementById("label").textContent = document.getElementById("testAudio").src;
-var audio1 = document.getElementById("testAudio");
-var amount = document.getElementById("amount");
-var pausePlay = document.getElementById("play-pause");
-var getUrls = document.getElementsByClassName("URLs");
-var sliderBackground = document.getElementById("slider-background1");
-var update = function() {document.getElementById("testAudio").currentTime = amount.value*(audio1.duration/100);};
-var regUpdate = function() {amount.value = audio1.currentTime / (audio1.duration / 100);};
-setInterval(regUpdate,300);
-var songSelected;
-var hovered;
-amount.addEventListener("mousedown",update);
-amount.addEventListener("mouseup",update);
-var pause = function() {
-if (audio1.paused) {
-audio1.play();
-}
-else {
-audio1.pause();
-}
-};
-pausePlay.addEventListener("click", pause);
-for (var i = 0; i < getUrls.length; i++) {
-getUrls[i].textContent = getUrls[i].dataset.name;
-}
-var something = function() {
-for (var i = 0; i < getUrls.length; i++) {
-if (songSelected !== getUrls[i] && hovered !== getUrls[i]) {
-getUrls[i].style.color = 'blue';
-getUrls[i].style.backgroundColor = 'white';
-getUrls[i].style.borderLeft = "2px solid blue";
-}
-}
-};
-setInterval(something,100);
-
-for (var i = 0; i < getUrls.length; i++) {
-
-
-getUrls[i].addEventListener('click',function() {
-audio1.src = this.dataset.url;
-this.style.borderLeft = "4px solid blue";
-this.style.backgroundColor = "lightBlue";
-this.style.color = "white";
-songSelected = this;
-console.log(songSelected);
-});
-getUrls[i].addEventListener('mouseenter', function() {
-hovered = getUrls[i];
-});
-getUrls[i].addEventListener('mouseout', function() {
-hovered = null});
-
-}
-
+    <script src = "/music.js">
     </script>
+    <script>
+      playMusic("testAudio", "amount", "play-pause", "prev-song", "next-song", "URLs");
+  </script>
      </div>                        
 </body>
 </html>
