@@ -108,6 +108,9 @@ this.style.backgroundColor = "lightBlue";
 this.style.color = "white";
 songSelected = this;
 console.log(songSelected);
+for (var j = 0; j < getUrls.length; j++) {
+getUrls[j].dispatchEvent("mouseleave");
+}
 });
 
 }
