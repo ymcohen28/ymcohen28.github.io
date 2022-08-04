@@ -13,6 +13,11 @@ border: 3px solid blue;
 border-radius: 10%;
 padding:4px;
 }
+.changesongs {
+display:flex;
+justify-content:space-between;
+width:40%;
+}
 .URLs {
 width:30%;
 font-size: 25px;
