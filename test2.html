@@ -82,7 +82,7 @@ prevSong.addEventListener("click", function() {
     else {
       songNumber -= 1;
     }
-    audio1.src = getUrls[songNumber].dataset.url;
+    getUrls[songNumber].click();
   }
 );
       
@@ -93,7 +93,7 @@ prevSong.addEventListener("click", function() {
     else {
       songNumber += 1;
     }
-    audio1.src = getUrls[songNumber].dataset.url;
+    getUrls[songNumber].click();
   }
 );
       
