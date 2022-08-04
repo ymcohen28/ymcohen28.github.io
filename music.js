@@ -108,4 +108,6 @@ var playMusic = function(audio, progressBar, pause, skipBack, skipForward, songL
       songNumber = parseInt(this.dataset.number);
     });
   }
+  // This sets the audio to initially be the first one in the list. 
+  getUrls[0].click();
 };
