@@ -16,7 +16,7 @@ var playMusic = function(audio, progressBar, pause, skipBack, skipForward, songL
   var songSelected;
   // This keeps track of the number of the song in the playlist, for skipping song. 
   var songNumber = 0;
-  getUrls[songNumber].click();
+  getUrls[0].click();
 
   // This assigns an event listener to the skip back button, and calls the function.
   prevSong.addEventListener("click", function() {
