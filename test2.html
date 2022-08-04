@@ -71,7 +71,7 @@ var regUpdate = function() {amount.value = audio1.currentTime / (audio1.duration
 setInterval(regUpdate,300);
 var songSelected;
 amount.addEventListener("mousedown",update);
-amount.addEventListener("mouseup",function() {amount.mousedown();});
+amount.addEventListener("mouseup", update);
 var pause = function() {
 if (audio1.paused) {
 audio1.play();
