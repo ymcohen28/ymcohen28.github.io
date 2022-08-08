@@ -37,14 +37,30 @@
 <div class = "content">
       <h1 style="margin-top:200px;"> My music </h1>
     <p>B"H, I am able to play the keyboard a little bit. <br> Here is some music I recorded!</p>
-    <h3>Uforatztah</h3>
-    <audio controls src="https://ymcohen28.github.io/Uforatzah.mp3"></audio>
-    <h3>Tyere Briyder</h3>    
-    <audio controls src="https://ymcohen28.github.io/Tyere Briyder.mp3"></audio>
-    <h3>Neyh Bayusya</h3>
-    <audio controls src="https://ymcohen28.github.io/Nyeh Bayusya.mp3"></audio>
-    <h3>Wake up Yidden</h3>
-    <audio controls src="https://ymcohen28.github.io/Wake up Yidden.mp3"></audio>
+          <audio id = "testAudio" src = "https://ymcohen28.github.io/Uforatzah.mp3"></audio>
+    <h1 class = "body" id = "label"></h1>
+ 
+    
+  
+  <div class = "slider-background" id = "slider-background1">
+    <button type= 'button' class = "audio-controls" id = "play-pause"> Play/Pause </button>
+    <input type="range" value="0" step= "0.1" min="0" max="100" id = "amount" >
+    <button class = "audio-controls" id = "audio-level"> </button>
+  </div>
+  <div class = "changesongs">
+  <button type = 'button' class = "audio-controls" id = "prev-song">Previous Song</buttton>  
+  <button type = 'button' class = "audio-controls" id = "next-song">Next Song</buttton>
+  </div>
+<p class='URLs' data-number = "0" data-url='https://ymcohen28.github.io/Uforatzah.mp3' data-name='Uforatztoh'></p>
+<p class='URLs' data-number = "1" data-url='https://ymcohen28.github.io/Tyere Briyder.mp3' data-name='Tyere Briyder'></p>
+<p class='URLs' data-number = "2" data-url='https://ymcohen28.github.io/Nyeh Bayusya.mp3' data-name='Nyeh Bayusya'></p>
+<p class='URLs' data-number = "3" data-url='https://ymcohen28.github.io/Wake up Yidden.mp3' data-name='Wake UP Yidden'></p>
+    <script src="/main.js"></script>
+    <script src = "/music.js">
+    </script>
+    <script>
+      playMusic("testAudio", "amount", "play-pause", "prev-song", "next-song", "URLs");
+  </script>
  <script src = "/main.js"></script>
       <link rel="stylesheet" href="style.css">
     </div>
