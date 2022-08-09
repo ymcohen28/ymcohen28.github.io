@@ -163,13 +163,13 @@ audio {
 }
 .head {
   text-align:center;
-  font-size:100%;  
+  font-size:400%;  
   float:right; 
-  padding-right:3%px;
-  padding-left:3%px;
-  padding-top:1%px;
-  padding-bottom:1%px;
-  margin-top:5%px;
+  padding-right:5%;
+  padding-left:5%;
+  padding-top:5%;
+  padding-bottom:5%;
+  margin-top:5%;
   color:white;
 }
 .body1 {
@@ -188,7 +188,7 @@ audio {
   font-size: 1.1;
 }
 .logo {
-  object-fit:cover; width:13%; margin-left:7%; margin-top:7%; z-index:6;
+  object-fit:cover; width:13%; margin-left:10%; margin-top:10%; z-index:6;
 }
 .code {
 font-family:monospace;
