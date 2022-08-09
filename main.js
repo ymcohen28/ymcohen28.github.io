@@ -1,4 +1,4 @@
-var audio1 = document.getElementById("audio1");
+var audio1 = document.getElementById("test-audio");
 var label = document.getElementById("label");
 setInterval(an,1);
 var an = function() {
