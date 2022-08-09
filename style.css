@@ -20,6 +20,28 @@ width:40%;
 margin-top: 10px;
 padding:3px;
 }
+#adjust-volume {
+float:right;
+width:10%;
+vertical-align:middle;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+#adjust-volume:hover {
+cursor:pointer; 
+}
+#adjust-volume::-webkit-slider-thumb {
+background-color:lightBlue;
+vertical-align:middle;
+margin-top:-7px;
+}
+#adjust-volume::-webkit-slider-runnable-track {
+background-color:white;
+height:20px;
+border-radius:8px;
+border:8px solid lightBlue;
+}
 .URLs {
 width:30%;
 font-size: 25px;
