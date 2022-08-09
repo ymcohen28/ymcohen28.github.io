@@ -2,7 +2,7 @@
 // You will need the following elements: an audio element, without the controls showing; a input (type = "range"); a button for pausing; a button for skipping forward; a button for skipping backwards; and a list of elemnts with the same class name, for the songList, with the follwing attributes: data-name (the name to display), data-url (the url for this song), and data-number (These should start with 0 for the first one, and ascend in order from there. If it is not in order, or some of them are repeated, it could cause some funny mishaps!
 // All of the following strings should be strings: the first is the id of the audio element, the second is the id of the input, the third is the id of the pause button, the fourth is the id of the skip BACK button, the fifth is the id of the skip FORWARD button, and the last is the CLASS name of the elements in the song list.
 
-var playMusic = function(audio, progressBar, pause, skipBack, shuffled,skipForward, songList) {
+var playMusic = function(audio, progressBar, pause, skipBack, shuffled, loop, skipForward, songList) {
   
   // All the variables involved in making a custom audio player.
   var audio1 = document.getElementById(audio);
@@ -10,6 +10,7 @@ var playMusic = function(audio, progressBar, pause, skipBack, shuffled,skipForwa
   var pausePlay = document.getElementById(pause);
   var prevSong = document.getElementById(skipBack);
   var shuffle = document.getElementById(shuffled);
+  var looped = document.getElementById(loop);
   var nextSong = document.getElementById(skipForward);
   var getUrls = document.getElementsByClassName(songList);
   //This seems not to be needed: var sliderBackground = document.getElementById("slider-background1");   
@@ -21,6 +22,7 @@ var playMusic = function(audio, progressBar, pause, skipBack, shuffled,skipForwa
   
   // This will allow us to change and check wether the user wants to shuffle or not.
   var isShuffled = false;
+  var isLooped = false;
   
   // This assigns an event listener to the skip back button, and calls the function.
   prevSong.addEventListener("click", function() {
@@ -56,6 +58,18 @@ var playMusic = function(audio, progressBar, pause, skipBack, shuffled,skipForwa
       shuffle.style.backgroundColor = 'lightBlue';
     }
   });
+  
+  loop.addEventListener('click', function() {
+      if (isLooped === false) {
+        isLooped = true;
+        loop.style.backgroundColor = 'blue';
+      }
+      else {
+        isLooped = false;
+        loop.style.backgroundColor = 'lightBlue';
+      }
+    }
+ );
                            
   // a function that will update the audios time based on the progress bars value, and then calls that function when the mouse is either down or up (though I'm not sure about how much the second one works)    
   var update = function() {document.getElementById("testAudio").currentTime = amount.value*(audio1.duration/100);};
@@ -83,7 +97,12 @@ var playMusic = function(audio, progressBar, pause, skipBack, shuffled,skipForwa
         return ranNum;
       }; 
       songNumber = shuffledSong();
-      getUrls[songNumber].click();
+      if (isLooped === false) {
+        getUrls[songNumber].click();
+      }
+      else {
+      audio1.currentTime = 0;
+      }
     }
   }
 };
