@@ -85,7 +85,8 @@ var playMusic = function(audio, progressBar, pause, skipBack, shuffled, loop, sk
     }
 
   if (audio1.currentTime === audio1.duration) {
-    if (isShuffled === false) {
+    if (isShuffled === false && isLooped === false) {
+      songNumber += 1;
     }
     
     else {
@@ -97,12 +98,12 @@ var playMusic = function(audio, progressBar, pause, skipBack, shuffled, loop, sk
         return ranNum;
       }; 
       songNumber = shuffledSong();
-      if (isLooped === false) {
-        getUrls[songNumber].click();
       }
-      else {
+    if (isLooped === false) {
+      getUrls[songNumber].click();
+    }
+    else {
       audio1.currentTime = 0;
-      }
     }
   }
 };
