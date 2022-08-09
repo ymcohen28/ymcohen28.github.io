@@ -61,7 +61,7 @@ var playMusic = function(audio, progressBar,adjust_volume, pause, skipBack, shuf
   });
   
   var changeVolume = function() {
-    audio1.volume = adjustVolume.amount;
+    audio1.volume = adjustVolume.value;
   };
   
   setInterval(changeVolume, 100);
