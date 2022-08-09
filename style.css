@@ -163,7 +163,7 @@ audio {
 }
 .head {
   text-align:center;
-  font-size:400%;  
+  font-size:300%;  
   float:right; 
   padding-right:5%;
   padding-left:5%;
@@ -188,7 +188,7 @@ audio {
   font-size: 1.1;
 }
 .logo {
-  object-fit:cover; width:13%; margin-left:10%; margin-top:10%; z-index:6;
+  object-fit:cover; width:40%; margin-left:10%; margin-top:10%; z-index:6;
 }
 .code {
 font-family:monospace;
