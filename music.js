@@ -2,13 +2,14 @@
 // You will need the following elements: an audio element, without the controls showing; a input (type = "range"); a button for pausing; a button for skipping forward; a button for skipping backwards; and a list of elemnts with the same class name, for the songList, with the follwing attributes: data-name (the name to display), data-url (the url for this song), and data-number (These should start with 0 for the first one, and ascend in order from there. If it is not in order, or some of them are repeated, it could cause some funny mishaps!
 // All of the following strings should be strings: the first is the id of the audio element, the second is the id of the input, the third is the id of the pause button, the fourth is the id of the skip BACK button, the fifth is the id of the skip FORWARD button, and the last is the CLASS name of the elements in the song list.
 
-var playMusic = function(audio, progressBar, pause, skipBack, skipForward, songList) {
+var playMusic = function(audio, progressBar, pause, skipBack, shuffled,skipForward, songList) {
   
   // All the variables involved in making a custom audio player.
   var audio1 = document.getElementById(audio);
   var amount = document.getElementById(progressBar);
   var pausePlay = document.getElementById(pause);
   var prevSong = document.getElementById(skipBack);
+  var shuffle = document.getElementById(shuffled);
   var nextSong = document.getElementById(skipForward);
   var getUrls = document.getElementsByClassName(songList);
   //This seems not to be needed: var sliderBackground = document.getElementById("slider-background1");   
@@ -17,11 +18,14 @@ var playMusic = function(audio, progressBar, pause, skipBack, skipForward, songL
   // This keeps track of the number of the song in the playlist, for skipping song. 
   var songNumber = 0;
   getUrls[0].click();
-
+  
+  // This will allow us to change and check wether the user wants to shuffle or not.
+  var isShuffled = false;
+  
   // This assigns an event listener to the skip back button, and calls the function.
   prevSong.addEventListener("click", function() {
       if (songNumber === 0)  {
-        songNumber = 3;
+        songNumber = getUrls.length-1;
       }
       else {
         songNumber -= 1;
@@ -32,7 +36,7 @@ var playMusic = function(audio, progressBar, pause, skipBack, skipForward, songL
   
   // This assigns an event listener to the skip forward button, and calls the function.
   nextSong.addEventListener("click", function() {
-      if (songNumber === 3)  {
+      if (songNumber === getUrls.length-1)  {
         songNumber = 0;
       }
       else {
@@ -42,6 +46,17 @@ var playMusic = function(audio, progressBar, pause, skipBack, skipForward, songL
     }
   );
   
+  shuffle.addEventListener('click', function() {
+    if (shuffled === false) {
+      shuffled = true;
+      shuffle.style.backgroundColor = 'blue';
+    }
+    else {
+      shuffled = false;
+      shuffle.style.backgroundColor = 'lightBlue';
+    }
+  };
+                           
   // a function that will update the audios time based on the progress bars value, and then calls that function when the mouse is either down or up (though I'm not sure about how much the second one works)    
   var update = function() {document.getElementById("testAudio").currentTime = amount.value*(audio1.duration/100);};
   
@@ -49,9 +64,30 @@ var playMusic = function(audio, progressBar, pause, skipBack, skipForward, songL
   amount.addEventListener("mouseup", update);
   
   // A function that will update the progress bar based on the audio's time, and then calls that function. (I also added some of other things that needed to be checked every so often.)
-  var regUpdate = function() {amount.value = audio1.currentTime / (audio1.duration / 100);
-                           if (audio1.currentTime === audio1.duration) {nextSong.click();}
-                           if (audio1.currentTime === 0) {pausePlay.click();}};
+  var regUpdate = function() {
+    amount.value = audio1.currentTime / (audio1.duration / 100);
+    if (audio1.currentTime === 0) {
+      pausePlay.click();
+    }
+
+  if (audio1.currentTime === audio1.duration) {
+    if (isShuffled === false) {
+      nextSong.click();
+    }
+    
+    else {
+      var shuffledSong = function() {
+        var ranNum = Math.floor(Math.random() * getUrls.length);
+          if (shuffledSong === songNumber) {
+            ranNum = shuffledSong();
+          }
+        return ranNum;
+      }; 
+      songNumber = shuffledSong();
+      getUrls[songNumber].click();
+    }
+  }
+};
 
   setInterval(regUpdate,400);
   
