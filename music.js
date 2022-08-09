@@ -55,7 +55,7 @@ var playMusic = function(audio, progressBar, pause, skipBack, shuffled,skipForwa
       shuffled = false;
       shuffle.style.backgroundColor = 'lightBlue';
     }
-  };
+  });
                            
   // a function that will update the audios time based on the progress bars value, and then calls that function when the mouse is either down or up (though I'm not sure about how much the second one works)    
   var update = function() {document.getElementById("testAudio").currentTime = amount.value*(audio1.duration/100);};
