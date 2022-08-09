@@ -47,12 +47,12 @@ var playMusic = function(audio, progressBar, pause, skipBack, shuffled,skipForwa
   );
   
   shuffle.addEventListener('click', function() {
-    if (shuffled === false) {
-      shuffled = true;
+    if (isShuffled === false) {
+      isShuffled = true;
       shuffle.style.backgroundColor = 'blue';
     }
     else {
-      shuffled = false;
+      isShuffled = false;
       shuffle.style.backgroundColor = 'lightBlue';
     }
   });
