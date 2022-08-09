@@ -72,7 +72,6 @@ var playMusic = function(audio, progressBar, pause, skipBack, shuffled,skipForwa
 
   if (audio1.currentTime === audio1.duration) {
     if (isShuffled === false) {
-      nextSong.click();
     }
     
     else {
