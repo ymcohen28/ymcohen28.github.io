@@ -40,8 +40,8 @@
           <audio id = "testAudio" src = "https://ymcohen28.github.io/Uforatzah.mp3"></audio> 
   <div class = "slider-background" id = "slider-background1">
     <button type= 'button' class = "audio-controls" id = "play-pause"> Play/Pause </button>
-    <input type="range" value="0" step= "0.1" min="0" max="100" id = "amount" >
-    <input type="range" value="0" step= "0.1" min="0" max="1" id = "adjust-volume" >
+    <input title = "Progress Bar" type="range" value="0" step= "0.1" min="0" max="100" id = "amount" >
+    <input title = "Volume" type="range" value="0" step= "0.1" min="0" max="1" id = "adjust-volume" >
     
   </div>
   <div class = "changesongs">
@@ -58,7 +58,7 @@
     <script src = "/music.js">
     </script>
     <script>
-      playMusic("testAudio", "amount", "play-pause", "prev-song", "shuffle", "loop", "next-song", "URLs");
+      playMusic("testAudio", "amount","adjust-volume", "play-pause", "prev-song", "shuffle", "loop", "next-song", "URLs");
   </script>
       <link rel="stylesheet" href="style.css">
     </div>
