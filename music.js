@@ -2,7 +2,7 @@
 // You will need the following elements: an audio element, without the controls showing; a input (type = "range"); a button for pausing; a button for skipping forward; a button for skipping backwards; and a list of elemnts with the same class name, for the songList, with the follwing attributes: data-name (the name to display), data-url (the url for this song), and data-number (These should start with 0 for the first one, and ascend in order from there. If it is not in order, or some of them are repeated, it could cause some funny mishaps!
 // All of the following strings should be strings: the first is the id of the audio element, the second is the id of the input, the third is the id of the pause button, the fourth is the id of the skip BACK button, the fifth is the id of the skip FORWARD button, and the last is the CLASS name of the elements in the song list.
 
-var playMusic = function(audio, progressBar, pause, skipBack, shuffled, loop, skipForward, songList) {
+var playMusic = function(audio, progressBar,adjust_volume, pause, skipBack, shuffled, loop, skipForward, songList) {
   
   // All the variables involved in making a custom audio player.
   var audio1 = document.getElementById(audio);
@@ -13,6 +13,7 @@ var playMusic = function(audio, progressBar, pause, skipBack, shuffled, loop, sk
   var looped = document.getElementById(loop);
   var nextSong = document.getElementById(skipForward);
   var getUrls = document.getElementsByClassName(songList);
+  var adjustVolume = document.getElemntById(adjust_volume);
   //This seems not to be needed: var sliderBackground = document.getElementById("slider-background1");   
   // This returns a dom node.
   var songSelected;
@@ -58,6 +59,12 @@ var playMusic = function(audio, progressBar, pause, skipBack, shuffled, loop, sk
       shuffle.style.backgroundColor = 'lightBlue';
     }
   });
+  
+  var changeVolume = function() {
+    audio1.volume = adjustVolume.amount;
+  };
+  
+  setInterval(changeVolume, 100);
   
   looped.addEventListener('click', function() {
       if (isLooped === false) {
