@@ -59,14 +59,14 @@ var playMusic = function(audio, progressBar, pause, skipBack, shuffled, loop, sk
     }
   });
   
-  loop.addEventListener('click', function() {
+  looped.addEventListener('click', function() {
       if (isLooped === false) {
         isLooped = true;
-        loop.style.backgroundColor = 'blue';
+        looped.style.backgroundColor = 'blue';
       }
       else {
         isLooped = false;
-        loop.style.backgroundColor = 'lightBlue';
+        looped.style.backgroundColor = 'lightBlue';
       }
     }
  );
