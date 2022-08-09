@@ -79,14 +79,13 @@ var playMusic = function(audio, progressBar,adjust_volume, pause, skipBack, shuf
  );
                            
   // a function that will update the audios time based on the progress bars value, and then calls that function when the mouse is either down or up (though I'm not sure about how much the second one works)    
-  var update = function() {};
+  var update = function() {    audio1.currentTime = amount.value*(audio1.duration/100);};
   
   amount.addEventListener("mousedown",update);
   amount.addEventListener("mouseup", update);
   
   // A function that will update the progress bar based on the audio's time, and then calls that function. (I also added some of other things that needed to be checked every so often.)
   var regUpdate = function() {
-    audio1.currentTime = amount.value*(audio1.duration/100);
     amount.value = audio1.currentTime / (audio1.duration / 100);
     if (audio1.currentTime === 0) {
       pausePlay.click();
