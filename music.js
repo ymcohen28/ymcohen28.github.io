@@ -13,7 +13,7 @@ var playMusic = function(audio, progressBar,adjust_volume, pause, skipBack, shuf
   var looped = document.getElementById(loop);
   var nextSong = document.getElementById(skipForward);
   var getUrls = document.getElementsByClassName(songList);
-  var adjustVolume = document.getElemntById(adjust_volume);
+  var adjustVolume = document.getElementById(adjust_volume);
   //This seems not to be needed: var sliderBackground = document.getElementById("slider-background1");   
   // This returns a dom node.
   var songSelected;
