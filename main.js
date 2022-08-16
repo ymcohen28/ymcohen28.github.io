@@ -14,8 +14,9 @@ realHeader[i].innerHTML = text;}
 var header = document.getElementsByClassName("head");
 for (var i = 0; i < header.length; i++) {
 }
-var head = document.getElementsByClassName("head");
+/*var head = document.getElementsByClassName("head");
 for (var i = 0; i < head.length; i++) {
   if (Window.outerWidth > 400) {head[i].style.fontSize = Window.outerWidth / 40;}
   else {head[i].style.fontSize = window.outerHeight / 10;}
 }
+*/
