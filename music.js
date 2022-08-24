@@ -131,7 +131,7 @@ var playMusic = function(audio, progressBar,adjust_volume, pause, skipBack, shuf
   window.addEventListener("keydown", function(e) {
   if (e.key === 'Space') {
   pause();
-  });
+  }});
   
   // Assigns names to the list of audio tracks.
   for (var i = 0; i < getUrls.length; i++) {
