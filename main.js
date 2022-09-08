@@ -27,6 +27,6 @@ if (window.outerWidth > 500) {
     for (var j = 0; j < realHeader.length;j ++) {  
 realHeader[j].innerHTML  = "<div class='header'><a href='/index.html'><img class='logo' title = 'Site Logo - Home Page' alt = 'Site Logo' id='logo-header' src='/logo.png' ></a><table style=' float:right;'><tr><td><a class='head' href='/index.html'>Home</a></td><td><a class='head' href='/blog.html'>Blog</a></td><td><a class='head' href='/music.html'>My Music</a></td><td><a class='head' title = 'Note: This is for testing purposes only and will PROBABLY contain more bugs than the rest of the site!!' href='/test.html'>Test</a></td></tr></table></div>";}
 
-    head[i].style.fontSize = "20px"}
+    head[i].style.fontSize = "50px"}
   else {for (var i = 0; i < realHeader.length;i ++) {  
-realHeader[i].innerHTML  = "<img id = 'smartPhoneNav' src = 'logo.png' > </img>";}}
+realHeader[i].innerHTML  = "<div class='header'><a href='/index.html'><img class='logo' title = 'Site Logo - Home Page' alt = 'Site Logo' id='logo-header' src='/logo.png' ></a><!--<table style=' float:right;'><tr><td><a class='head' href='/index.html'>Home</a></td><td><a class='head' href='/blog.html'>Blog</a></td><td><a class='head' href='/music.html'>My Music</a></td><td><a class='head' title = 'Note: This is for testing purposes only and will PROBABLY contain more bugs than the rest of the site!!' href='/test.html'>Test</a></td></tr></table>--></div>";}}
