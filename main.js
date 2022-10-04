@@ -9,14 +9,9 @@ var an = function() {
 };
 
 var text;
-var header = document.getElementsByClassName("head");
-for (var i = 0; i < header.length; i++) {
-}
+
 var realHeader = document.getElementsByTagName("header");
 
-var head = document.getElementsByClassName("head");
-for (var i = 0; i < head.length; i++) {console.log(i);
-  }
 
 
 
