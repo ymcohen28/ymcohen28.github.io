@@ -204,16 +204,16 @@ font-size:32px;
 background-color:rgba(220,220,240);
 }
 .blog-sidebar {
-width:10%;
+width:200px;
 margin-right:5%;
 right:10px;
 position:fixed;
-height:100px;
 float:right;
 background-color:light-blue;
 display: flex;
 align-items: center;
 justify-content: space-between;  
 flex-direction: column;
+border: 3px double blue;
 
 }
