@@ -39,7 +39,12 @@
     <script>
    var stopRedirect = document.getElementById("stop-redirect");
    var check = 1;
-   var tOggle = function() { check = 2;
+   var secs = document.getElementById("min-redirect");
+   var changeSecs = function() {
+   secs.textContent = 10;
+   secs.textContent -=1;
+   };
+      var tOggle = function() { check = 2;
                            document.getElementById("warning").textContent = 'The redirector has been prevented.';};
       stopRedirect.addEventListener('click',tOggle);
       var changeLocation = function() {  
@@ -47,8 +52,9 @@
         
         }
         else {
-          window.location = "/blog.html";}};
+          window.location = "https://ymcohen28.github.io/home/blog.html";}};
     setTimeout(changeLocation,9999);
+    setInterval(changeSecs, 999);
     </script>
 
 
