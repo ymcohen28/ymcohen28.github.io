@@ -1,3 +1,5 @@
+var body1 = document.getElementsByClassName("percent45");
+
 var audio1 = document.getElementById("test-audio");
 var label = document.getElementById("label");
 setInterval(an,1);
@@ -12,7 +14,10 @@ var text;
 
 var realHeader = document.getElementsByTagName("header");
 
-
+var changeBodySize = function() {
+if (screen.orientation.type === "landscape-primary" || screen.orientation.type === "landscape-secondary") {body1.style.width = "45%";}
+if (screen.orientation.type !== "landscape-primary" && screen.orientation.type !== "landscape-secondary") {body1.style.width = "80%";}
+};
 
 var siteNavigation = function() {
 
@@ -27,4 +32,6 @@ if (screen.orientation.type !== "landscape-primary" && screen.orientation.type !
 realHeader[i].innerHTML  = "<div class='header'><a href='https://ymcohen28.github.io/index.html'><img class='logo' title = 'Site Logo - Home Page' alt = 'Site Logo' id='logo-header' src='https://ymcohen28.github.io/logo.png' ></a><img class='nav' title = 'Mobile Site Navigation' alt = 'Site Navigation' id='openSmartphoneNav' src='https://ymcohen28.github.io/thingy.png' ><!--<table style=' float:right;'><tr><td><a class='head' href='/index.html'>Home</a></td><td><a class='head' href='/blog.html'>Blog</a></td><td><a class='head' href='/music.html'>My Music</a></td><td><a class='head' title = 'Note: This is for testing purposes only and will PROBABLY contain more bugs than the rest of the site!!' href='/test.html'>Test</a></td></tr></table>--></div>";}}
 };
 siteNavigation();
+changeBodySize();
 screen.addEventListener("orientationchange", siteNavigation());
+screen.addEventListener("orientationchange", changeBodySize());
