@@ -13,6 +13,7 @@ border: 3px solid blue;
 border-radius: 10%;
 padding:4px;
 }
+
 .changesongs {
 display:flex;
 justify-content:space-between;
@@ -205,7 +206,7 @@ font-size:32px;
 background-color:rgba(220,220,240);
 }
 .blog-sidebar {
-padding:20px;
+padding:10px;
 right:10px;
 position:fixed;
 float:right;
@@ -215,5 +216,7 @@ align-items: center;
 justify-content: space-between;  
 flex-direction: column;
 border: 3px double blue;
-
+}
+.blog-sidebar > button {
+margin: 5px;
 }
