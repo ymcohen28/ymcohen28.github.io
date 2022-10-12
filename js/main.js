@@ -16,12 +16,10 @@ var realHeader = document.getElementsByTagName("header");
 
 var changeBodySize = function() {
 if (screen.orientation.type === "landscape-primary" || screen.orientation.type === "landscape-secondary") {
-  for( var i = 0; i < body1.length; i++)
-  {body1[i].style.width = "45%";}
+  for( var i = 0; i < body1.length; i++) {body1[i].style.width = "45%";}
 }
 if (screen.orientation.type !== "landscape-primary" && screen.orientation.type !== "landscape-secondary") {
-  for(var i = 0; i <  body1.length; i++) 
-  {body1[i].style.width = "80%";}
+  for(var i = 0; i <  body1.length; i++) {body1[i].style.width = "80%";}
 }
 };
 
