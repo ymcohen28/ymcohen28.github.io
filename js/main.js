@@ -15,8 +15,14 @@ var text;
 var realHeader = document.getElementsByTagName("header");
 
 var changeBodySize = function() {
-if (screen.orientation.type === "landscape-primary" || screen.orientation.type === "landscape-secondary") {body1.style.width = "45%";}
-if (screen.orientation.type !== "landscape-primary" && screen.orientation.type !== "landscape-secondary") {body1.style.width = "80%";}
+if (screen.orientation.type === "landscape-primary" || screen.orientation.type === "landscape-secondary") {
+  for( var i = 0; i < body1.length)
+  {body1[i].style.width = "45%";}
+}
+if (screen.orientation.type !== "landscape-primary" && screen.orientation.type !== "landscape-secondary") {
+  for(var i = 0; i <  body1.length; i++) 
+  {body1[i].style.width = "80%";}
+}
 };
 
 var siteNavigation = function() {
