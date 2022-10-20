@@ -37,7 +37,18 @@ realHeader[i].innerHTML  = "<div class='header'><a href='https://ymcohen28.githu
 };
 siteNavigation();
 changeBodySize();
-screen.orientation.onchange = siteNavigation();
+screen.orientation.onchange = function() {
+
+if (screen.orientation.type === "landscape-primary" || screen.orientation.type === "landscape-secondary") {
+          console.log("yay");
+
+    for (var j = 0; j < realHeader.length;j ++) {  
+realHeader[j].innerHTML  = "<div class='header'><a href='https://ymcohen28.github.io/index.html'><img class='logo' title = 'Site Logo - Home Page' alt = 'Site Logo' id='logo-header' src='https://ymcohen28.github.io/logo.png' ></a><table style=' float:right;'><tr><td><a class='head' href='/index.html'>Home</a></td><td><a class='head' href='https://ymcohen28.github.io/home/blog.html'>Blog</a></td><td><a class='head' href='https://ymcohen28.github.io/home/music.html'>My Music</a></td><td><a class='head' title = 'Note: This is for testing purposes only and will PROBABLY contain more bugs than the rest of the site!!' href='https://ymcohen28.github.io/home/test.html'>Test</a></td></tr></table></div>";}
+
+}
+if (screen.orientation.type !== "landscape-primary" && screen.orientation.type !== "landscape-secondary") {for (var i = 0; i < realHeader.length;i ++) {  
+realHeader[i].innerHTML  = "<div class='header'><a href='https://ymcohen28.github.io/index.html'><img class='logo' title = 'Site Logo - Home Page' alt = 'Site Logo' id='logo-header' src='https://ymcohen28.github.io/logo.png' ></a><img class='nav' title = 'Mobile Site Navigation' alt = 'Site Navigation' id='openSmartphoneNav' src='https://ymcohen28.github.io/thingy.png' ><!--<table style=' float:right;'><tr><td><a class='head' href='/index.html'>Home</a></td><td><a class='head' href='/blog.html'>Blog</a></td><td><a class='head' href='/music.html'>My Music</a></td><td><a class='head' title = 'Note: This is for testing purposes only and will PROBABLY contain more bugs than the rest of the site!!' href='/test.html'>Test</a></td></tr></table>--></div>";}}
+};
 screen.addEventListener("orientationchange", changeBodySize());
 
 
