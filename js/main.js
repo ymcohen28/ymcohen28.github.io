@@ -37,5 +37,5 @@ realHeader[i].innerHTML  = "<div class='header'><a href='https://ymcohen28.githu
 };
 siteNavigation();
 changeBodySize();
-screen.addEventListener("orientationchange", siteNavigation());
+screen.orientation.onChange = siteNavigation();
 screen.addEventListener("orientationchange", changeBodySize());
