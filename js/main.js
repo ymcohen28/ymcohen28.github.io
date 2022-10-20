@@ -37,5 +37,9 @@ realHeader[i].innerHTML  = "<div class='header'><a href='https://ymcohen28.githu
 };
 siteNavigation();
 changeBodySize();
-screen.orientation.onChange = siteNavigation();
+screen.orientation.onchange = siteNavigation();
 screen.addEventListener("orientationchange", changeBodySize());
+
+
+var openSmartPhoneNav = document.getElementById("openSmartPhoneNav");
+openSmartPhoneNav.addEventListener("click", function() {});
