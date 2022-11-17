@@ -50,8 +50,12 @@
       // Paste code from Khan Academy here:
     var x = 200;
     var y = 200;
+    var enemyx = 0;
+    var enemyy = 0;
       draw = function() {
     background(255,255,200);
+    fill(255,0,0);
+    var enemy = ellipse(enemyx, enemyy, 20,20);
     var me = ellipse(x, y, 10,10);
     keyPressed = function() {
     if (keyCode === 37) {x -= 1}
@@ -59,7 +63,17 @@
     if (keyCode === 39) {x+= 1}
     if (keyCode === 40) {y += 1}
     };
-    
+    var enemymove = function() {
+    if (enemyx < x) {enemyx +=1;}
+    if (enemyx > x) {enemyx -=1;}
+    if (enemyy < y) {enemyy +=1;}
+    if (enemyy > y) {enemyy -=1;}
+    };
+    enemymove();
+    if (dist(enemyx, enemyy, x, y) < 30) {
+      fill(255,100,100);
+      rect(0,0,width,height);
+      text("You have lost!!", 200, 200, 100, 40);
     };
     }};
 
