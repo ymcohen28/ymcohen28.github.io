@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+      <script>
+
+      </script>
+  
+  <title>Blog</title>
+  
+  <link rel="icon" type="image/png" href="https://ymcohen28.github.io/logo.ico" />
+
+  <link rel="stylesheet" href="https://ymcohen28.github.io/css/style.css">
+              <!--Start of Tawk.to Script-->
+              <script type="text/javascript">
+              var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+              (function(){
+              var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+              s1.async=true;
+              s1.src='https://embed.tawk.to/62cc7c947b967b1179990eaf/default';
+              s1.charset='UTF-8';
+              s1.setAttribute('crossorigin','*');
+              s0.parentNode.insertBefore(s1,s0);
+              })();
+              </script>
+              <!--End of Tawk.to Script-->
+  </head>
+
+  <body>
+   
+  <header>
+
+</header>
+    
+<div class = "content">
+  <div class = "percent45">
+     <canvas id="mycanvas"></canvas> 
+  <!-- See https://khanacademy.zendesk.com/hc/en-us/articles/202260404-What-parts-of-ProcessingJS-does-Khan-Academy-support- for differences -->
+  <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
+  <script>
+  var programCode = function(processingInstance) {
+    with (processingInstance) {
+      size(400, 400); 
+      frameRate(30);
+        
+      // Paste code from Khan Academy here:
+      fill(255, 255, 0);
+      ellipse(200, 200, 200, 200);
+      noFill();
+      stroke(0, 0, 0);
+      strokeWeight(2);
+      arc(200, 200, 150, 100, 0, PI);
+      fill(0, 0, 0);
+      ellipse(250, 200, 10, 10);
+      ellipse(153, 200, 10, 10);
+    }};
+
+  // Get the canvas that ProcessingJS will use
+  var canvas = document.getElementById("mycanvas"); 
+  // Pass the function to ProcessingJS constructor
+  var processingInstance = new Processing(canvas, programCode); 
+  </script>
+  <script src="https://ymcohen28.github.io/js/main.js"></script>
+    </div>
+    </div>
+</body>
+</html>
