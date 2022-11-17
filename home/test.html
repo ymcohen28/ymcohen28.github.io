@@ -48,9 +48,17 @@
       frameRate(30);
         
       // Paste code from Khan Academy here:
-    draw = function() {
+    var x = 200;
+    var y = 200;
+      draw = function() {
     background(255,255,200);
-      ellipse(mouseX, mouseY, 10,10);
+    var me = ellipse(x, y, 10,10);
+    keyPressed = function() {
+    if (keyCode === 37) {x -= 1}
+    if (keyCode === 38) {y -=1}
+    if (keyCode === 39) {x+= 1}
+    if (keyCode === 40) {y += 1}
+    };
     
     };
     }};
