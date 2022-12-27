@@ -81,17 +81,20 @@
     }}; */
       
         var shapes =  [];
-      var selected;
-        var createSquare = false;
-      
+var selected = 0;
+var createSquare = false;
+var somethingselected
+fill(156, 156, 156);
+var createSquares = rect(10,10,30,30);
+
 draw = function() {
     
     mouseClicked = function() {
     
-        if (mouseX > 20 && mouseY > 20 && mouseX < 50 && mouseY < 50) {
+        if (mouseX > 10 && mouseY > 10 && mouseX < 40 && mouseY < 40) {
             
             createSquare = true;
-            console.log("Now click anywhere besides for the top bar in order to place a square");
+        
         }
         
         if (mouseY > 50) {
@@ -104,55 +107,57 @@ draw = function() {
             }
         
         }
+        
+         var ifselected;
     
     for (var i = 0; i < shapes.length; i++) {
 
     if (mouseX > shapes[i][0] && mouseY > shapes[i][1] && mouseX < shapes[i][0] + shapes[i][2] && mouseY < shapes[i][1] + shapes[i][3]) {
-                println(i);
-              selected = i;  
+                println("yay");
+                selected = i;
+                somethingselected = true;
             }
         
         }
     
     };
     
-    var ifselected = function(i) {
-    rect(shapes[i][0]-10, shapes[i][1]-10,20,20);
-    rect(shapes[i][0] + shapes[i][2]-10, shapes[i][1]-10,20,20);
-    rect(shapes[i][0]-10, shapes[i][1] + shapes[i][3]-10,20,20);
-    rect(shapes[i][0] + shapes[i][2]-10, shapes[i][1] + shapes[i][3] -10,20,20);
-    
-    };
-  ifselected(selected);
     mouseDragged = function() {
     
-    for (var i = 0; i < shapes.length; i++) {
+    
 
-    if (mouseX > shapes[i][0] && mouseY > shapes[i][1] && mouseX < shapes[i][0] + shapes[i][2] && mouseY < shapes[i][1] + shapes[i][3]) {
-                shapes[i][0] = mouseX- (shapes[i][2]/2);
-                shapes[i][1] = mouseY - (shapes[i][3]/2);
+    if (mouseX > shapes[selected][0] && mouseY > shapes[selected][1] && mouseX < shapes[selected][0] + shapes[selected][2] && mouseY < shapes[selected][1] + shapes[selected][3]) {
+                println("yay");
+                shapes[selected][0] = mouseX- (shapes[selected][2]/2);
+                shapes[selected][1] = mouseY - (shapes[selected][3]/2);
             }
         
-        }
+        
     };
     background(255, 255, 255);
-  fill(200,200,200);
-        var controlBar = rect(0,0,1000,55);
-    
-  fill(150, 150, 150);
-      var createSquares = rect(20,20,30,30);
-  fill(0,0,0);        
-  text("Create Square", 5, 15);
-
+      fill(150, 150, 150);
+      var createSquares = rect(10,10,30,30);
     for (var i = 0; i < shapes.length; i++) {
         fill(shapes[i][4]);
         rect(shapes[i][0], shapes[i][1],shapes[i][2], shapes[i][3]);
         //println(shapes[i]);
     }
+ifselected = function(i) {
+   fill(0,0,0);
+   rect(shapes[i][0] - 5, shapes[i][1] - 5, 10, 10);
+   rect(shapes[i][0] + shapes[i][2] - 5, shapes[i][1] - 5, 10, 10);
+   rect(shapes[i][0] - 5, shapes[i][1] + shapes[i][3] - 5, 10, 10);
+   rect(shapes[i][0] + shapes[i][2] - 5, shapes[i][1] + shapes[i][3] - 5, 10, 10);
 
-    
+ };
+ if (somethingselected === true) {
+ ifselected(selected);
+   
+ }    
 };
 
+
+  
 
     }};
 
