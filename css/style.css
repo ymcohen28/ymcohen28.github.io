@@ -218,5 +218,12 @@ flex-direction: column;
 border: 3px double blue;
 }
 .blog-sidebar button {
-margin: 5px;
+margin: 2px;
+}
+
+#mycanvas {
+  width:1000px;
+  border: 2px solid blue;
+  background-color: light-blue;
+
 }
