@@ -39,13 +39,13 @@
 <div class = "content">
   <div class = "percent45">
     <h1> hello </h1>
-     <canvas style = "background-color: lightgrey;" id="mycanvas"></canvas> 
+     <canvas  id="mycanvas"></canvas> 
   <!-- See https://khanacademy.zendesk.com/hc/en-us/articles/202260404-What-parts-of-ProcessingJS-does-Khan-Academy-support- for differences -->
   <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
   <script>
   var programCode = function(processingInstance) {
     with (processingInstance) {
-      size(400, 400); 
+      size(1000, 400); 
       frameRate(30);
         
       // Paste code from Khan Academy here:
@@ -81,11 +81,12 @@
       
         var shapes =  [];
 
-var createSquare = false;
-
-fill(156, 156, 156);
-var createSquares = rect(10,10,30,30);
-
+        var createSquare = false;
+        fill(200,200,200);
+        var controlBar = rect(0,0,400,40);
+        fill(156, 156, 156);
+        var createSquares = rect(10,10,30,30);
+        text("Create Square", 5, 5);
 draw = function() {
     
     mouseClicked = function() {
@@ -93,7 +94,7 @@ draw = function() {
         if (mouseX > 10 && mouseY > 10 && mouseX < 40 && mouseY < 40) {
             
             createSquare = true;
-        
+            console.log("Now click anywhere besides for the top bar in order to place a square");
         }
         
         if (mouseY > 50) {
