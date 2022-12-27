@@ -92,7 +92,7 @@ draw = function() {
     mouseClicked = function() {
     
         if (mouseX > 10 && mouseY > 10 && mouseX < 40 && mouseY < 40) {
-            
+            console.log("Now click anywhere below the top bar to create a square");
             createSquare = true;
         
         }
@@ -127,7 +127,7 @@ draw = function() {
     
 
     if (mouseX > shapes[selected][0] && mouseY > shapes[selected][1] && mouseX < shapes[selected][0] + shapes[selected][2] && mouseY < shapes[selected][1] + shapes[selected][3]) {
-                println("yay");
+                println("Now drag you're mouse");
                 shapes[selected][0] = mouseX- (shapes[selected][2]/2);
                 shapes[selected][1] = mouseY - (shapes[selected][3]/2);
             }
