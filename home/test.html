@@ -80,7 +80,7 @@
     }}; */
       
         var shapes =  [];
-
+        var selected = null;
         var createSquare = false;
         fill(200,200,200);
         var controlBar = rect(0,0,400,40);
@@ -111,8 +111,8 @@ draw = function() {
     for (var i = 0; i < shapes.length; i++) {
 
     if (mouseX > shapes[i][0] && mouseY > shapes[i][1] && mouseX < shapes[i][0] + shapes[i][2] && mouseY < shapes[i][1] + shapes[i][3]) {
-                println("yay");
-                
+                println("i");
+              selected = i;  
             }
         
         }
@@ -138,7 +138,7 @@ draw = function() {
   fill(150, 150, 150);
       var createSquares = rect(20,20,30,30);
   fill(0,0,0);        
-  text("Create Square", 10, 10);
+  text("Create Square", 5, 51`);
 
     for (var i = 0; i < shapes.length; i++) {
         fill(shapes[i][4]);
