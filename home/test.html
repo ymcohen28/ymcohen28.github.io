@@ -116,12 +116,19 @@ draw = function() {
     
     };
     
+    var ifselected = function(i) {
+    rect(shapes[i][0]-10, shapes[i][1]-10,20,20);
+    rect(shapes[i][0] + shapes[i][2]-10, shapes[i][1]-10,20,20);
+    rect(shapes[i][0]-10, shapes[i][1] + shapes[i][3]-10,20,20);
+    rect(shapes[i][0] + shapes[i][2]-10, shapes[i][1] + shapes[i][3] -10,20,20);
+    
+    };
+  ifselected(selected);
     mouseDragged = function() {
     
     for (var i = 0; i < shapes.length; i++) {
 
     if (mouseX > shapes[i][0] && mouseY > shapes[i][1] && mouseX < shapes[i][0] + shapes[i][2] && mouseY < shapes[i][1] + shapes[i][3]) {
-                println("yay");
                 shapes[i][0] = mouseX- (shapes[i][2]/2);
                 shapes[i][1] = mouseY - (shapes[i][3]/2);
             }
