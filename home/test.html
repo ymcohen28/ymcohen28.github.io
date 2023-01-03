@@ -124,7 +124,7 @@ draw = function() {
     
     mouseDragged = function() {
     
-    if (mouseX > shapes[selected][0]-5 && mouseY > shapes[selected][1]-5 && mouseX < shapes[selected][0] + 5 && mouseY < shapes[selected][1] + 5 && mouseX < 50) {
+    if (mouseX > shapes[selected][0]-10 && mouseY > shapes[selected][1]-10 && mouseX < shapes[selected][0] + 10 && mouseY < shapes[selected][1] + 10 && mouseX < 50) {
       shapes[selected][0] = mouseX;
       shapes[selected][1] = mouseY;
       shapes[selected][2] += shapes[selected][0]-mouseX;
