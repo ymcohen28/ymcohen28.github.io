@@ -123,15 +123,49 @@ draw = function() {
     };
     
     mouseDragged = function() {
+      
+     //tp right
+     if (mouseX > shapes[selected][0] + shapes[selected][2] - 5 && mouseY > shapes[selected][1] 
+     - 5 && mouseX < shapes[selected][0] + shapes[selected][2] + 5 && mouseY < shapes[selected][1] + 5 && mouseX > 50) {
+       console.log("resing");
+         
+          shapes[selected][3] = shapes[selected][1] + shapes[selected][3] - mouseY;
+          
+          shapes[selected][1] = mouseY;
+          
+       shapes[selected][2] = mouseX - shapes[selected][0];
+       
+     }
+      
+    //bottom right
+    if (mouseX > shapes[selected][0]+shapes[selected][2]-5 && mouseY > shapes[selected][1]+shapes[selected][3]-5 && mouseX < shapes[selected][0] + shapes[selected][2]+ 5 && mouseY < shapes[selected][1]+ shapes[selected][3] + 5 && mouseX > 50) {
+      console.log("resing");
+      
+      shapes[selected][2] = mouseX - shapes[selected][0];
+      shapes[selected][3] = mouseY - shapes[selected][1];
+    }
     
-    if (mouseX > shapes[selected][0]-10 && mouseY > shapes[selected][1]-10 && mouseX < shapes[selected][0] + 10 && mouseY < shapes[selected][1] + 10 && mouseX < 50) {
+ //bottom left
+ else if (mouseX > shapes[selected][0] - 5 && mouseY > shapes[selected][1] + shapes[selected][3] - 5 && mouseX < shapes[selected][0]  + 5 && mouseY < shapes[selected][1] + shapes[selected][3] + 5 && mouseX > 50) {
+      console.log("resing");
+    
+      shapes[selected][2] = shapes[selected][0]+ shapes[selected][2]-mouseX;
+      shapes[selected][3] = mouseY - shapes[selected][1];
+      shapes[selected][0] = mouseX;
+    }
+    //top left
+    else if (mouseX > shapes[selected][0] - 5 && mouseY > shapes[selected][1] - 5 && mouseX < shapes[selected][0] + 5 && mouseY < shapes[selected][1]  + 5 && mouseX > 50) {
+      console.log("resing");
+    
+      shapes[selected][2] = shapes[selected][0] + shapes[selected][2] - mouseX;
+      shapes[selected][3] = shapes[selected][1] + shapes[selected][3] - mouseY;
       shapes[selected][0] = mouseX;
       shapes[selected][1] = mouseY;
-      shapes[selected][2] += shapes[selected][0]-mouseX;
-      shapes[selected][3] += shapes[selected][1] - mouseY;
     }
-   else if (mouseX > shapes[selected][0] && mouseY > shapes[selected][1] && mouseX < shapes[selected][0] + shapes[selected][2] && mouseY < shapes[selected][1] + shapes[selected][3] && mouseX < 50) {
+    
+   else if (mouseX > shapes[selected][0] && mouseY > shapes[selected][1] && mouseX < shapes[selected][0] + shapes[selected][2] && mouseY < shapes[selected][1] + shapes[selected][3] && mouseX > 50) {
                 println("Now drag your mouse");
+                console.log("dragging");
                 shapes[selected][0] = mouseX- (shapes[selected][2]/2);
                 shapes[selected][1] = mouseY - (shapes[selected][3]/2);
             }
