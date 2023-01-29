@@ -57,7 +57,7 @@ color:blue;
 border: 2px solid white;
 border-left: 2px solid blue;
 padding:3px;
-
+cursor:pointer;
 }
 .URLs:hover {
 border-left: 4px solid blue;
