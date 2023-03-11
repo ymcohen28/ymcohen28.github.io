@@ -48,9 +48,9 @@
     //setInterval(100, function{}(code = inputs.value;));
           </script>
     <script>
-    //var code;
-   //var inputs =  document.getElementById("inputs");
-    //setInterval(100, function{}(code = inputs.value;));
+   var code;
+   var inputs =  document.getElementById("inputs");
+    setInterval(100, function(){code = inputs.value;});
   var programCode = function(processingInstance) {
     with (processingInstance) {
       size(400, 400); 
@@ -61,6 +61,7 @@
       draw = function() {
       println(inputs.value);
       };
+      eval(code);
       fill(255, 255, 0);
   
       ellipse(200, 200, 200, 200);
