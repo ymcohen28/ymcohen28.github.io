@@ -37,17 +37,22 @@
 </header>
     
 <div class = "content">
+  <input id = "inputs" type = "text" style = "width:100px;"> </input>
   <div class = "percent45">
      <canvas id="mycanvas"></canvas> 
   <!-- See https://khanacademy.zendesk.com/hc/en-us/articles/202260404-What-parts-of-ProcessingJS-does-Khan-Academy-support- for differences -->
   <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
   <script>
+    var code;
+   var inputs =  document.getElementById("inputs");
+    setInterval(100, function{}(code = inputs.value;));
   var programCode = function(processingInstance) {
     with (processingInstance) {
       size(400, 400); 
       frameRate(30);
         
       // Paste code from Khan Academy here:
+      eval(code);
       fill(255, 255, 0);
       ellipse(200, 200, 200, 200);
       noFill();
