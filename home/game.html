@@ -73,11 +73,10 @@
       ellipse(153, 200, 10, 10);
    
       println(inputs.value);
-      keyPressed = function() {
-        if (keyCode === 186){
+     if (inputs.value[inputs.value-1] === ";") {
           eval(inputs.value);}
                 text(inputs.value,150,150);
-      };
+     
       };
     }};
 
