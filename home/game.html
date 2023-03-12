@@ -73,9 +73,11 @@
       ellipse(153, 200, 10, 10);
    
       println(inputs.value);
-          eval(inputs.value);
+      keyTyped = function() {
+        if (key === ";"){
+          eval(inputs.value);}
                 text(inputs.value,150,150);
-
+      };
       };
     }};
 
