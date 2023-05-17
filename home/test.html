@@ -31,6 +31,7 @@
 <div class='header' id = "landscape-nav"><a href='https://ymcohen28.github.io/index.html'><img class='logo' title = 'Site Logo - Home Page' alt = 'Site Logo' id='logo-header' src='https://ymcohen28.github.io/logo.png' ></a><table style=' float:right;'><tr><td><a class='head' href='/index.html'>Home</a></td><td><a class='head' href='https://ymcohen28.github.io/home/blog.html'>Blog</a></td><td><a class='head' href='https://ymcohen28.github.io/home/music.html'>My Music</a></td><td><a class='head' title = 'Note: This is for testing purposes only and will PROBABLY contain more bugs than the rest of the site!!' href='https://ymcohen28.github.io/home/test.html'>Test</a></td></tr></table></div>
     
 <div hidden class='header' id = "portrait-nav"><a href='https://ymcohen28.github.io/index.html'><img class='logo' title = 'Site Logo - Home Page' alt = 'Site Logo' id='logo-header' src='https://ymcohen28.github.io/logo.png' ></a><img class='nav' title = 'Mobile Site Navigation' alt = 'Site Navigation' id='openSmartphoneNav' src='https://ymcohen28.github.io/thingy.png' ></div>
+    <div hidden id = "sideNavSidebar"></div>
 </header>
     <script>
 var landscape_nav = document.getElementById("landscape-nav");
@@ -54,7 +55,7 @@ if (screen.orientation.type !== "landscape-primary" && screen.orientation.type !
    
 siteNavigation();
 //changeBodySize();
-setInterval(siteNavigation(), 1000);
+
 screen.orientation.onchange = function() {
 siteNavigation();
 };
