@@ -48,8 +48,8 @@ if (screen.orientation.type !== "landscape-primary" && screen.orientation.type !
 
 var siteNavigation = function() {
 
-if (screen.orientation.type === "landscape-primary" || screen.orientation.type === "landscape-secondary") {landscape_nav.hidden = false; portrait_nav.hidden = true; }
-if (screen.orientation.type !== "landscape-primary" && screen.orientation.type !== "landscape-secondary") {landscape_nav.hidden = false; portrait_nav.hidden = true;}
+if (screen.orientation.type === "landscape-primary" || screen.orientation.type === "landscape-secondary") {portrait_nav.hidden = true; landscape_nav.hidden = false;}
+if (screen.orientation.type !== "landscape-primary" && screen.orientation.type !== "landscape-secondary") {landscape_nav.hidden = true; portrait_nav.hidden = false;}
     };
    
 siteNavigation();
