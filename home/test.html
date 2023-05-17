@@ -33,9 +33,39 @@
   <body>
    
   <header>
-
-</header>
+<div class='header' id = "landscape-nav"><a href='https://ymcohen28.github.io/index.html'><img class='logo' title = 'Site Logo - Home Page' alt = 'Site Logo' id='logo-header' src='https://ymcohen28.github.io/logo.png' ></a><table style=' float:right;'><tr><td><a class='head' href='/index.html'>Home</a></td><td><a class='head' href='https://ymcohen28.github.io/home/blog.html'>Blog</a></td><td><a class='head' href='https://ymcohen28.github.io/home/music.html'>My Music</a></td><td><a class='head' title = 'Note: This is for testing purposes only and will PROBABLY contain more bugs than the rest of the site!!' href='https://ymcohen28.github.io/home/test.html'>Test</a></td></tr></table></div>
     
+<div class='header' id = "portrait-nav"><a href='https://ymcohen28.github.io/index.html'><img class='logo' title = 'Site Logo - Home Page' alt = 'Site Logo' id='logo-header' src='https://ymcohen28.github.io/logo.png' ></a><img class='nav' title = 'Mobile Site Navigation' alt = 'Site Navigation' id='openSmartphoneNav' src='https://ymcohen28.github.io/thingy.png' ></div>
+</header>
+var landscape-nav = document.getElementById("landscape-nav");
+var portrait-nav = document.getElementById("portrait-nav");
+var body1 = document.getElementsByClassName("percent45");
+var changeBodySize = function() {
+if (screen.orientation.type === "landscape-primary" || screen.orientation.type === "landscape-secondary") {
+  for( var i = 0; i < body1.length; i++) {body1[i].style.width = "45%";}
+}
+if (screen.orientation.type !== "landscape-primary" && screen.orientation.type !== "landscape-secondary") {
+  for(var i = 0; i <  body1.length; i++) {body1[i].style.width = "80%";}
+}
+};
+
+var siteNavigation = function() {
+
+if (screen.orientation.type === "landscape-primary" || screen.orientation.type === "landscape-secondary") {portrait-nav.hidden = "true"; landscape-nav.hidden = "false";}
+if (screen.orientation.type !== "landscape-primary" && screen.orientation.type !== "landscape-secondary") {landscape-nav.hidden = "true"; portrait-nav.hidden = "false";}
+    };
+   
+siteNavigation();
+changeBodySize();
+screen.orientation.onchange = function() {
+siteNavigation();
+};
+screen.addEventListener("orientationchange", changeBodySize());
+
+
+var openSmartPhoneNav = document.getElementById("openSmartPhoneNav");
+openSmartPhoneNav.addEventListener("click", function() {});
+
 <div class = "content">
   <div class = "percent45">
     <h1> Drawing app. </h1>
