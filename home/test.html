@@ -4,11 +4,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-      <script>
-
-      </script>
   
   <title>Testing... 1.2.3!!</title>
   
@@ -53,20 +48,21 @@ if (screen.orientation.type !== "landscape-primary" && screen.orientation.type !
 
 var siteNavigation = function() {
 
-if (screen.orientation.type === "landscape-primary" || screen.orientation.type === "landscape-secondary") {portrait_nav.hidden = "true"; landscape_nav.hidden = "false";}
-if (screen.orientation.type !== "landscape-primary" && screen.orientation.type !== "landscape-secondary") {landscape_nav.hidden = "true"; portrait_nav.hidden = "false";}
+if (screen.orientation.type === "landscape-primary" || screen.orientation.type === "landscape-secondary") {landscape_nav.hidden = false; portrait_nav.hidden = true; }
+if (screen.orientation.type !== "landscape-primary" && screen.orientation.type !== "landscape-secondary") {landscape_nav.hidden = false; portrait_nav.hidden = true;}
     };
    
 siteNavigation();
-changeBodySize();
+//changeBodySize();
+setInterval(siteNavigation(), 1000);
 screen.orientation.onchange = function() {
 siteNavigation();
 };
-screen.addEventListener("orientationchange", changeBodySize());
+//screen.addEventListener("orientationchange", changeBodySize());
 
 
 var openSmartPhoneNav = document.getElementById("openSmartPhoneNav");
-openSmartPhoneNav.addEventListener("click", function() {});
+//openSmartPhoneNav.addEventListener("click", function() {});
     </script>
 <div class = "content">
   <div class = "percent45">
