@@ -50,7 +50,7 @@ if (screen.orientation.type !== "landscape-primary" && screen.orientation.type !
 var siteNavigation = function() {
 
 if (screen.orientation.type === "landscape-primary" || screen.orientation.type === "landscape-secondary") {portrait_nav.hidden = true; landscape_nav.hidden = false;}
-if ((screen.orientation.type !== "landscape-primary" && screen.orientation.type !== "landscape-secondary")||screen.width<screen.height) {landscape_nav.hidden = true; portrait_nav.hidden = false;}
+if ((screen.orientation.type !== "landscape-primary" && screen.orientation.type !== "landscape-secondary")||window.innerWidth<window.innerHeight) {landscape_nav.hidden = true; portrait_nav.hidden = false;}
     };
    
 siteNavigation();
