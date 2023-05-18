@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Testing... 1.2.3!!</title>
+  
+  <link rel="icon" type="image/png" href="https://ymcohen28.github.io/logo.ico" />
 
+  <link rel="stylesheet" href="https://ymcohen28.github.io/css/style.css">
+              <!--Start of Tawk.to Script-->
+              <script type="text/javascript">
+              var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+              (function(){
+              var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+              s1.async=true;
+              s1.src='https://embed.tawk.to/62cc7c947b967b1179990eaf/default';
+              s1.charset='UTF-8';
+              s1.setAttribute('crossorigin','*');
+              s0.parentNode.insertBefore(s1,s0);
+              })();
+              </script>
+              <!--End of Tawk.to Script-->
+  </head>
+
+  <body>
+ <div style = "width: 35%; position: fixed; right: 0px; top: 0px; z-index:10; box-shadow:-10px 0px 40px black; height:100%; background-color: lightBlue; " hidden id = "sideNavSidebar"><table style = "float:right;"><tr><td><image id = "x-navigation" style = "float:right; width: 50%;" src = "https://ymcohen28.github.io/images/X-navigation.png" /></td></tr><tr><td><a class='head' href='/index.html'>Home</a></td></tr><tr><td><a class='head' href='https://ymcohen28.github.io/home/blog.html'>Blog</a></td></tr><tr><td><a class='head' href='https://ymcohen28.github.io/home/music.html'>My Music</a></td></tr><tr><td><a class='head' title = 'Note: This is for testing purposes only and will PROBABLY contain more bugs than the rest of the site!!' href='https://ymcohen28.github.io/home/test.html'>Test</a></td></tr></table></div>
+
+  <header>
+<div class='header' id = "landscape-nav"><a href='https://ymcohen28.github.io/index.html'><img class='logo' title = 'Site Logo - Home Page' alt = 'Site Logo' id='logo-header' src='https://ymcohen28.github.io/logo.png' ></a><table style=' float:right;'><tr><td><a class='head' href='/index.html'>Home</a></td><td><a class='head' href='https://ymcohen28.github.io/home/blog.html'>Blog</a></td><td><a class='head' href='https://ymcohen28.github.io/home/music.html'>My Music</a></td><td><a class='head' title = 'Note: This is for testing purposes only and will PROBABLY contain more bugs than the rest of the site!!' href='https://ymcohen28.github.io/home/test.html'>Test</a></td></tr></table></div>
+    
+<div hidden class='header' id = "portrait-nav"><a href='https://ymcohen28.github.io/index.html'><img class='logo' title = 'Site Logo - Home Page' alt = 'Site Logo' id='logo-header' src='https://ymcohen28.github.io/logo.png' ></a><img class='nav' title = 'Mobile Site Navigation' alt = 'Site Navigation' id='openSmartphoneNav' src='https://ymcohen28.github.io/thingy.png' ></div>
+</header>
+    <script>
+var landscape_nav = document.getElementById("landscape-nav");
+var portrait_nav = document.getElementById("portrait-nav");
+var x_navigation = document.getElementById("x-navigation");
+var body1 = document.getElementsByClassName("percent45");
+
+      var changeBodySize = function() {
+if (screen.orientation.type === "landscape-primary" || screen.orientation.type === "landscape-secondary") {
+  for( var i = 0; i < body1.length; i++) {body1[i].style.width = "45%";}
+}
+if ((screen.orientation.type !== "landscape-primary" && screen.orientation.type !== "landscape-secondary")||window.innerWidth<window.innerHeight) {
+  for(var i = 0; i <  body1.length; i++) {body1[i].style.width = "80%";}
+}
+};
+
+var siteNavigation = function() {
+
+if (screen.orientation.type === "landscape-primary" || screen.orientation.type === "landscape-secondary") {portrait_nav.hidden = true; landscape_nav.hidden = false;}
+if ((screen.orientation.type !== "landscape-primary" && screen.orientation.type !== "landscape-secondary")||window.innerWidth<window.innerHeight) {landscape_nav.hidden = true; portrait_nav.hidden = false;}
+    };
+   
+siteNavigation();
+//changeBodySize();
+window.addEventListener("resize",siteNavigation);
+screen.orientation.onchange = function() {
+siteNavigation();
+};
+//screen.addEventListener("orientationchange", changeBodySize());
+x_navigation.onclick = function() {document.getElementById("sideNavSidebar").hidden = true};
+
+var openSmartPhoneNav = document.getElementById("openSmartphoneNav");
+openSmartPhoneNav.addEventListener("click", function() {document.getElementById("sideNavSidebar").hidden = false;});
+    </script>
+    
+<div class = "content">
+  <div class = "percent45">
+    <h1>Events</h1>
+    <h2>Year 11</h2>
+    <h3>Event: Something really really great!!!</h3>
+    <h2>Year 12</h2>
+    <h3>Event: Something even better!!</h3>
+    </div>
+    </div>
+</body>
+</html>
