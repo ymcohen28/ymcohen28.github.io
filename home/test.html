@@ -55,7 +55,7 @@ if ((screen.orientation.type !== "landscape-primary" && screen.orientation.type 
    
 siteNavigation();
 //changeBodySize();
-
+window.addEventListener("resize",siteNavigation);
 screen.orientation.onchange = function() {
 siteNavigation();
 };
