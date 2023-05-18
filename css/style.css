@@ -180,6 +180,7 @@ audio {
   color:white;
   font-size: 2em;
   height: 40px;
+    border:2px solid lightBlue;
 
 
 }
