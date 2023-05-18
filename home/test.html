@@ -26,7 +26,7 @@
   </head>
 
   <body>
- <div style = "width: 35%; position: fixed; right: 0px; top: 0px; z-index:10; box-shadow:-10px 0px 40px black; height:100%; background-color: lightBlue; font-size:50;" hidden id = "sideNavSidebar"><table style = "float:right;"><tr><td><image style = "width: 80%;" src = "../images/X-navigation.png" /></td></tr><tr><td><a class='head' href='/index.html'>Home</a></td></tr><tr><td><a class='head' href='https://ymcohen28.github.io/home/blog.html'>Blog</a></td></tr><tr><td><a class='head' href='https://ymcohen28.github.io/home/music.html'>My Music</a></td></tr><tr><td><a class='head' title = 'Note: This is for testing purposes only and will PROBABLY contain more bugs than the rest of the site!!' href='https://ymcohen28.github.io/home/test.html'>Test</a></td></tr></table></div>
+ <div style = "width: 35%; position: fixed; right: 0px; top: 0px; z-index:10; box-shadow:-10px 0px 40px black; height:100%; background-color: lightBlue; font-size:50;" hidden id = "sideNavSidebar"><table style = "float:right;"><tr><td><image id = "x-navigation" style = "float:right; width: 50%;" src = "../images/X-navigation.png" /></td></tr><tr><td><a class='head' href='/index.html'>Home</a></td></tr><tr><td><a class='head' href='https://ymcohen28.github.io/home/blog.html'>Blog</a></td></tr><tr><td><a class='head' href='https://ymcohen28.github.io/home/music.html'>My Music</a></td></tr><tr><td><a class='head' title = 'Note: This is for testing purposes only and will PROBABLY contain more bugs than the rest of the site!!' href='https://ymcohen28.github.io/home/test.html'>Test</a></td></tr></table></div>
 
   <header>
 <div class='header' id = "landscape-nav"><a href='https://ymcohen28.github.io/index.html'><img class='logo' title = 'Site Logo - Home Page' alt = 'Site Logo' id='logo-header' src='https://ymcohen28.github.io/logo.png' ></a><table style=' float:right;'><tr><td><a class='head' href='/index.html'>Home</a></td><td><a class='head' href='https://ymcohen28.github.io/home/blog.html'>Blog</a></td><td><a class='head' href='https://ymcohen28.github.io/home/music.html'>My Music</a></td><td><a class='head' title = 'Note: This is for testing purposes only and will PROBABLY contain more bugs than the rest of the site!!' href='https://ymcohen28.github.io/home/test.html'>Test</a></td></tr></table></div>
@@ -36,6 +36,7 @@
     <script>
 var landscape_nav = document.getElementById("landscape-nav");
 var portrait_nav = document.getElementById("portrait-nav");
+var x_navigation = document.getElementById("x_navigation");
 var body1 = document.getElementsByClassName("percent45");
 
       var changeBodySize = function() {
@@ -60,7 +61,7 @@ screen.orientation.onchange = function() {
 siteNavigation();
 };
 //screen.addEventListener("orientationchange", changeBodySize());
-
+x_navigation.addEventListener("click", function() {portrait_nav.hidden = true;});
 
 var aa = document.getElementById("openSmartphoneNav");
 aa.addEventListener("click", function() {document.getElementById("sideNavSidebar").hidden = false;});
