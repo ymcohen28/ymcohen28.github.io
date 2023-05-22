@@ -199,7 +199,7 @@ audio {
   font-size: 1.1;
 }
 .logo {
-  object-fit:cover; height:138%; margin-left:40px;  z-index:6;
+  object-fit:cover; height:145%; margin-left:40px;  z-index:6;
 }
 .code {
 font-family:monospace;
