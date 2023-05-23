@@ -1,3 +1,7 @@
+:root {
+--cteenBlue: #2FC7F6;
+--cteenOrange: #E9B479;
+}
 html {
 scroll-padding-top: 17%;
 scroll-behavior: smooth;
@@ -160,8 +164,8 @@ audio {
  background-color:lightBlue;
 }
 .header {
-  color:lightBlue;
-  background-color:lightBlue;
+  color:white;
+  background-color:var(--cteenOrange);
   height:15%;
   position:fixed;
   top:0;
